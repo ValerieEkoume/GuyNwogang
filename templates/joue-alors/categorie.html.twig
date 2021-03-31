@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Catégories: {{ joueAlors }} {% endblock %}
+
+{% block body %}
+<h1>{{ joueAlors }}</h1>
+
+<div>
+    c'est là que je mettrai la liste des catégories
+</div>
+
+<h2>NIVEAUX ({{ niveaux| length }})</h2>
+
+
+<ul>
+{% for niveau in niveaux %}
+   <li>{{ niveau }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
