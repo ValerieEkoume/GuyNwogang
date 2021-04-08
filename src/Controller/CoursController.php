@@ -42,8 +42,28 @@ class CoursController extends AbstractController
 //      $cours[0]->setFree(true);
 //      $this->em->flush();
        return  $this->render('cours/joue-alors.html.twig', [
-           'menu_cours' => 'cours'
+           'menu_cours' => 'courses'
        ]);
    }
+
+    /**
+     * @Route ("/joue-alors/{slug}-{id}", name="cours.show", requirements={"slug": "[a-z0-9\-]*"})
+     * @return Response
+     */
+   public function show(Cours $cours, string $slug) : Response
+   {
+        if ($cours->getSlug() !== $slug) {
+            return $this->redirectToRoute('cours.show', [
+                'id' => $cours->getId(),
+                'slug' => $cours->getSlug()
+            ], 301);
+        }
+        return $this->render('joue-alors/show.html.twig', [
+            'cours'=> $cours,
+            'menu_cours' => 'courses'
+
+        ]);
+   }
+
 
 }

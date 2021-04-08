@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\CoursRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Cocur\Slugify\Slugify;
 
 /**
  * @ORM\Entity(repositoryClass=CoursRepository::class)
@@ -59,6 +60,11 @@ class Cours
      */
     private $free = false;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $parts;
+
     public function __construct()
     {
         $this->created_at = new \DateTime();
@@ -82,6 +88,11 @@ class Cours
         $this->title = $title;
 
         return $this;
+    }
+
+    public function getSlug() : string
+    {
+        return (new Slugify())->slugify($this->title);
     }
 
     public function getDescription(): ?string
@@ -137,6 +148,11 @@ class Cours
         return $this;
     }
 
+    public function getNiveauType() : string
+    {
+        return self ::NIVEAU[$this->niveau];
+    }
+
     public function getCeatedAt(): ?\DateTimeInterface
     {
         return $this->ceated_at;
@@ -157,6 +173,20 @@ class Cours
     public function setFree(bool $free): self
     {
         $this->free = $free;
+
+        return $this;
+    }
+
+
+
+    public function getParts(): ?int
+    {
+        return $this->parts;
+    }
+
+    public function setParts(int $parts): self
+    {
+        $this->parts = $parts;
 
         return $this;
     }

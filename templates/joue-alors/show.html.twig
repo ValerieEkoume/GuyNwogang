@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title cours.title %}
+
+
+{% block body %}
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-8">
+
+            </div>
+            <div class="col-md-4">
+                <h1>{{ cours.title }}</h1>
+                <h2>{{ cours.parts }} parties - {{ cours.genre }}</h2>
+                <div class="text-primary">{{ cours.formatedPrix }} €</div>
+                <a href="#" class="btn btn-primary">Nous contacter</a>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+
+        <p>
+            {{ cours.description  | nl2br}}
+        </p>
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Dans ce cours vous trouverez</h2>
+                    <table class="table table-striped">
+                        <tr>
+                            <td>Random</td>
+                            <td>{{ cours.parts }}</td>
+
+                        </tr>
+                        <tr>
+                            <td>Random</td>
+                            <td>{{ cours.genre }}</td>
+                        </tr>
+
+                        <tr>
+                            <td>Niveau</td>
+                            <td>{{ cours.niveauType }}</td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                <div class="col-md-4">
+                    <h2>Spécificités</h2>
+                </div>
+            </div>
+
+
+    </div>
+
+
+
+
+{% endblock %}

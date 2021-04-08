@@ -977,25 +977,29 @@ SELECT|sys.sys_config
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <key id="301" parent="291" name="PRIMARY">
+    <column id="301" parent="291" name="parts">
+      <Position>9</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <key id="302" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="302" parent="292" name="version">
+    <column id="303" parent="292" name="version">
       <Position>1</Position>
       <DataType>varchar(191)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="303" parent="292" name="executed_at">
+    <column id="304" parent="292" name="executed_at">
       <Position>2</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="304" parent="292" name="execution_time">
+    <column id="305" parent="292" name="execution_time">
       <Position>3</Position>
       <DataType>int|0s</DataType>
     </column>
-    <key id="305" parent="292" name="PRIMARY">
+    <key id="306" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>version</ColNames>
       <Primary>1</Primary>
