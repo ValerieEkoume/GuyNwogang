@@ -49,7 +49,7 @@ class CoursRepository extends ServiceEntityRepository
     private function findVisibleQuery() : QueryBuilder
     {
         return $this->createQueryBuilder('c')
-            ->where('c.free = true');
+            ->where('c.free = false');
     }
 
     // /**

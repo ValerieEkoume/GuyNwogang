@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AccueilController extends AbstractController
 {
     /**
-     * @Route ("/accueil")
+     * @Route ("/joue-alors")
      * @param CoursRepository $repository
      * @return Response
      */
@@ -24,5 +24,7 @@ class AccueilController extends AbstractController
         ]);
 
     }
+
+
 
 }

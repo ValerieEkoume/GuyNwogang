@@ -1,6 +1,6 @@
 {% extends 'base.html.twig'%}
 
-{% block title 'Gérer les Leçons' %}
+{% block title 'Joue Alors' %}
 
 {% block body %}
 
@@ -15,33 +15,34 @@
     </div>
 </nav>
 
-<div class="container mt-4">
-    <h1>Gérer les bien</h1>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>Titre</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
+
+    <div class="jumbotron text-center">
+        <h1>Joue-Alors !</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci culpa cupiditate deserunt explicabo
+            harum, incidunt inventore ipsam iure labore laboriosam nesciunt numquam provident quae quos soluta totam veniam voluptates?</p>
+    </div>
+
+    <div class="container">
+        <h2>Les nouveautés</h2>
+        <div class="flex-row">
         {% for cours in courses %}
-        <tr>
-            <td>{{ cours.title }}</td>
-            <td>
-                <a href="{{ path('admin.cours.edit', {id: cours.id})}}" class="btn btn-secondary">Editer</a>
-            </td>
-        </tr>
-    {% endfor %}
-        </tbody>
-    </table>
 
-</div>
+            <div class="col-3">
+                <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="#">{{ cours.title }}</a>
+                    </h5>
+                    <p class="card-tex">{{ cours.genre }} ({{ cours.niveauType }})</p>
+                </div>
+                </div>
+            </div>
 
-<div class="container">
-{% for cours in courses %}
-{% endfor %}
-</div>
+        {% endfor %}
+        </div>
+
+    </div>
+
 
 {% endblock %}
 

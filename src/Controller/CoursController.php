@@ -32,19 +32,19 @@ class CoursController extends AbstractController
         $this->em=$em;
     }
 
-   /**
-    * @Route ("/joue-alors", name="cours.joueAlors")description
-    * @return Response
-    */
-   public function joueAlors(): Response
-   {
-      $cours = $this->repository->findAllVisible();
-//      $cours[1]->setFree(true);
-      $this->em->flush();
-       return  $this->render('cours/joue-alors.html.twig', [
-           'menu_cours' => 'courses'
-       ]);
-   }
+//   /**
+//    * @Route ("/joue-alors", name="cours.joueAlors")description
+//    * @return Response
+//    */
+//   public function joueAlors(): Response
+//   {
+//      $cours = $this->repository->findAllVisible();
+////      $cours[1]->setFree(true);
+//      $this->em->flush();
+//       return  $this->render('cours/joue-alors.html.twig', [
+//           'courses' => 'courses'
+//       ]);
+//   }
 
     /**
      * @Route ("/joue-alors/{slug}-{id}", name="cours.show", requirements={"slug": "[a-z0-9\-]*"})

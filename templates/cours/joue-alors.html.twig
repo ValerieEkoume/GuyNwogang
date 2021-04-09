@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title 'Joue Alors!' %}
+{% block title 'Joue Alors' %}
 
 {% block body %}
 
@@ -15,8 +15,33 @@
         </div>
     </nav>
 
-    <div class="container mt-4">
-        <h1> Tous les Cours</h1>
+
+    <div class="jumbotron text-center">
+        <h1>Joue-Alors !</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci culpa cupiditate deserunt explicabo
+            harum, incidunt inventore ipsam iure labore laboriosam nesciunt numquam provident quae quos soluta totam veniam voluptates?</p>
     </div>
+
+    <div class="container">
+        <h2>Les nouveautés</h2>
+        <div class="row flex">
+            {% for cours in courses %}
+
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="#">{{ cours.title }}</a>
+                            </h5>
+{#                            <p class="card-tex">{{ cours.genre }} ({{ cours.niveau }})</p>#}
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+
+    </div>
+
 
 {% endblock %}

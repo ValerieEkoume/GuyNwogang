@@ -5,9 +5,12 @@ namespace App\Entity;
 use App\Repository\CoursRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Cocur\Slugify\Slugify;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=CoursRepository::class)
+ * @UniqueEntity("title")
  */
 class Cours
 {
@@ -26,6 +29,7 @@ class Cours
     private $id;
 
     /**
+     * @Assert\Length(min=3, max=40)
      * @ORM\Column(type="string", length=255)
      */
     private $title;
@@ -62,6 +66,7 @@ class Cours
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Range(min="2", max="5")
      */
     private $parts;
 
