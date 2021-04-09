@@ -38,9 +38,9 @@ class CoursController extends AbstractController
     */
    public function joueAlors(): Response
    {
-//      $cours = $this->repository->findAllVisible();
-//      $cours[0]->setFree(true);
-//      $this->em->flush();
+      $cours = $this->repository->findAllVisible();
+//      $cours[1]->setFree(true);
+      $this->em->flush();
        return  $this->render('cours/joue-alors.html.twig', [
            'menu_cours' => 'courses'
        ]);

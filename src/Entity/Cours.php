@@ -65,6 +65,7 @@ class Cours
      */
     private $parts;
 
+
     public function __construct()
     {
         $this->created_at = new \DateTime();
@@ -153,14 +154,14 @@ class Cours
         return self ::NIVEAU[$this->niveau];
     }
 
-    public function getCeatedAt(): ?\DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
-        return $this->ceated_at;
+        return $this->created_at;
     }
 
-    public function setCeatedAt(\DateTimeInterface $ceated_at): self
+    public function setCreatedAt(\DateTimeInterface $created_at): self
     {
-        $this->ceated_at = $ceated_at;
+        $this->ceated_at = $created_at;
 
         return $this;
     }

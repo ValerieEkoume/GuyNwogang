@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+    {% block body %}
+    <div class="container mt-4">
+        <h1>Gérer les leçons</h1>
+
+    {{ include('admin/cours/_form.html.twig', { button: 'Editer'})}}
+
+    </div>
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+
+
+    {% block body %}
+        <div class="container mt-4">
+            <h1>Créer une nouvelle leçon</h1>
+
+            {{ include('admin/cours/_form.html.twig', {button: 'Ajouter'})}}
+
+        </div>
+
+    {% endblock %}
+

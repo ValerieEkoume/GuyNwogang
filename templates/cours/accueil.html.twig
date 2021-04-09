@@ -1,44 +1,47 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig'%}
 
-{% block title 'Joue Alors!' %}
+{% block title 'Gérer les Leçons' %}
 
 {% block body %}
 
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-            <a href="{{ path('app_home_home') }}" class="navbar-brand">Guy Nwognag</a>
-            <a href="{{ path('cours.joueAlors') }}" class="navbar-brand">Joue-Alors</a>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-
-    <div class="container ">
-        <h2> Tous les derniers Cours</h2>
-        <div class="row flex">
-            {% for cours in courses %}
-                <div class="col-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <a href="{{ path('cours.show', {id: cours.id, slug: cours.slug}) }}">{{ cours.title }}</a>
-
-                            </h5>
-                            <p class="card-text">{{ cours.genre }} ({{ cours.NIVEAU }})</p>
-                            <div class="text-primary">{{ cours.formatedPrix }} €</div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-            {% endfor %}
-
-        </div>
-
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <a href="{{ path('app_home_home') }}" class="navbar-brand">Guy Nwognag</a>
+        <a href="{{ path('app_accueil_accueil') }}" class="navbar-brand">Accueil</a>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
     </div>
+</nav>
+
+<div class="container mt-4">
+    <h1>Gérer les bien</h1>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for cours in courses %}
+        <tr>
+            <td>{{ cours.title }}</td>
+            <td>
+                <a href="{{ path('admin.cours.edit', {id: cours.id})}}" class="btn btn-secondary">Editer</a>
+            </td>
+        </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+<div class="container">
+{% for cours in courses %}
+{% endfor %}
+</div>
 
 {% endblock %}
 
