@@ -190,6 +190,11 @@ nav {
 
 /* delete */
 
+/* LOGIN*/
+
+.error {
+ color: red;
+}
 
 
 footer {

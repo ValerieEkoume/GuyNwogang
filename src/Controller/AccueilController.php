@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AccueilController extends AbstractController
 {
     /**
-     * @Route ("/joue-alors")
+     * @Route ("/joue-alors", name="cours.joueAlors")
      * @param CoursRepository $repository
      * @return Response
      */
