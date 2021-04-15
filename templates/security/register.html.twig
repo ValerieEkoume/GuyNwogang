@@ -1,0 +1,17 @@
+    {% extends 'layouts/base.html.twig' %}
+
+    {% block title 'Register' %}
+
+    {% block body %}
+        <h1 class=" mt-4  text-center">Créer un compte</h1>
+
+        <div class=" mt-4 container">
+        {{ form_start(registrationForm) }}
+        {{ form_widget(registrationForm) }}
+        <input type="submit" class="btn btn-primary" value="Register" formnovalidate>
+        {{ form_end(registrationForm) }}
+
+
+
+        </div>
+    {% endblock %}

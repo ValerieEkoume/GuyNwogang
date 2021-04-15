@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -23,16 +24,21 @@ class User implements UserInterface, \Serializable
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $username;
 
     /**
      * @ORM\Column(type="string", length=255, unique=true)
+     * @Assert\NotBlank
+     * @Assert\Email
      */
-    private $email;
+    protected $email;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
+     * @Assert\Length(min=6)
      */
     private $password;
 
@@ -40,8 +46,7 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(type="json")
      */
     private  $roles = [];
-
-
+    protected $plainPassword;
 
 
     public function getId(): ?int
@@ -49,8 +54,14 @@ class User implements UserInterface, \Serializable
         return $this->id;
     }
 
+
+    /**
+     *
+     */
     public function getUsername(): ?string
     {
+        //Identifiant visuel utilisé au niveau de la DEBUG BAR
+        // Et s'affiche également sur le site quand le user est connecté
         return $this->username;
     }
 
@@ -86,7 +97,6 @@ class User implements UserInterface, \Serializable
     }
 
 
-
     /**
      * Returns the roles or permissions granted to the user for security.
      */
@@ -104,8 +114,12 @@ class User implements UserInterface, \Serializable
         $this->roles = $roles;
     }
 
+    /**
+     *
+     */
     public function getSalt(): ?string
     {
+        //Not needed if a modern algorithm is used (bcrypt, sodium...)
         return null;
     }
 
@@ -132,6 +146,7 @@ class User implements UserInterface, \Serializable
             $this->password,
         ] = unserialize($serialized);
     }
+
 
 
 }

@@ -1,26 +1,10 @@
-{% extends 'base.html.twig'%}
+{% extends 'layouts/base.html.twig'%}
 
 {% block title 'Joue Alors' %}
 
 {% block body %}
 
-<nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-        <a href="{{ path('app_home_home') }}" class="navbar-brand">Guy Nwognag</a>
-        <a href="{{ path('cours.joueAlors') }}" class="navbar-brand">Accueil</a>
-        <a>
-            {% if app.user %}
-                <div class="mb-3">
-                    You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
-                </div>
-            {% endif %}
-        </a>
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-    </div>
-</nav>
+
 
 
     <div class="jumbotron text-center">

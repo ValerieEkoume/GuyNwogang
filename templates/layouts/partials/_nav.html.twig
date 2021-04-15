@@ -1,0 +1,26 @@
+
+
+<nav>
+    <ul class="">
+        <li><a href="{{ path('app_joue-alors') }}">Joue alors</a></li>
+        <li><a href="{{path('app_home')}}">Home</a></li>
+        {% if app.user %}
+            <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
+        {% else  %}
+        <li><a href="{{path('app_login')}}">Se Connecter</a></li>
+        <li><a href="{{ path('app_register') }}">Créer un compte</a></li>
+        {% endif %}
+    </ul>
+    <h5>
+        {% if app.user %}
+            <div class="mb-3">
+                Bonjour {{ app.user.username }}, Vous êtes connecté !
+            </div>
+        {% endif %}
+    </h5>
+{#    <form class="d-flex">#}
+{#        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">#}
+{#        <button class="btn btn-outline-success" type="submit">Search</button>#}
+{#    </form>#}
+
+</nav>

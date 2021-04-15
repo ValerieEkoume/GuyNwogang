@@ -19,6 +19,7 @@ use Symfony\Component\Security\Csrf\CsrfToken;
 use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 use Symfony\Component\Security\Guard\Authenticator\AbstractFormLoginAuthenticator;
 use Symfony\Component\Security\Guard\PasswordAuthenticatedInterface;
+use Symfony\Component\Security\Http\Authenticator\Passport\Badge\RememberMeBadge;
 use Symfony\Component\Security\Http\Util\TargetPathTrait;
 
 class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements PasswordAuthenticatedInterface
@@ -59,6 +60,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
         );
 
         return $credentials;
+
     }
 
     public function getUser($credentials, UserProviderInterface $userProvider)
@@ -89,6 +91,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
     public function getPassword($credentials): ?string
     {
         return $credentials['password'];
+
     }
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
@@ -98,7 +101,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
         }
 
         // For example : return new RedirectResponse($this->urlGenerator->generate('some_route'));
-        return new RedirectResponse($this->urlGenerator->generate('cours.joueAlors'));
+        return new RedirectResponse($this->urlGenerator->generate('app_joue-alors'));
     }
 
     protected function getLoginUrl()
