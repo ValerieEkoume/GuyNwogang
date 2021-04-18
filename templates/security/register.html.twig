@@ -1,14 +1,26 @@
     {% extends 'layouts/base.html.twig' %}
 
-    {% block title 'Register' %}
+    {% block title 'Inscription' %}
 
     {% block body %}
         <h1 class=" mt-4  text-center">Créer un compte</h1>
 
+        {% for message in app.flashes('success') %}
+            <div class="flash-notice">
+                {{ message }}
+            </div>
+        {% endfor %}
+        {% for message in app.flashes('error') %}
+            <div class="flash-notice">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+
         <div class=" mt-4 container">
         {{ form_start(registrationForm) }}
         {{ form_widget(registrationForm) }}
-        <input type="submit" class="btn btn-primary" value="Register" formnovalidate>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
         {{ form_end(registrationForm) }}
 
 

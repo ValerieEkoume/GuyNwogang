@@ -42,11 +42,29 @@ class User implements UserInterface, \Serializable
      */
     private $password;
 
+    public function __construct()
+    {
+        $this->createdAt = new \DateTime();
+        $this->roles = ['ROLE_USER'];
+    }
+
+
+
     /**
      * @ORM\Column(type="json")
      */
     private  $roles = [];
     protected $plainPassword;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $token;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
 
 
     public function getId(): ?int
@@ -106,6 +124,7 @@ class User implements UserInterface, \Serializable
         // guarantee every user at least has ROLE_USER
         $roles = ['ROLE_USER'];
 
+
         return array_unique($roles);
     }
 
@@ -147,6 +166,33 @@ class User implements UserInterface, \Serializable
         ] = unserialize($serialized);
     }
 
+    public function getToken(): ?string
+    {
+        return $this->token;
+    }
+
+    public function setToken(?string $token): self
+    {
+        $this->token = $token;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function setEnabled(bool $true)
+    {
+    }
 
 
 }

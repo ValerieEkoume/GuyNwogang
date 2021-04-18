@@ -4,56 +4,74 @@
 
 
 {% block body %}
-    <div class="jumbotron">
-        <div class="row">
-            <div class="col-md-8">
 
+            <p class="text-center">
+                {{ cours.description  | nl2br}}
+            </p>
+    <div class="co-container">
+        <div class="ro">
+            <div class="co">
+                <div class="feature-img">
+                    <img src="{{ asset('images/IMG_8797ok2.jpg')}} " class="" width="110%" alt="Guy">
+                    <img src="{{ asset('images/play.png') }}" class="play-btn"
+                         onclick="playVideo('{{ asset('images/1_bikutsiB_bpm100.mp4') }}')">
+                </div>
             </div>
-            <div class="col-md-4">
-                <h1>{{ cours.title }}</h1>
-                <h2>{{ cours.parts }} parties - {{ cours.genre }}</h2>
-                <div class="text-primary">{{ cours.formatedPrix }} €</div>
-                <a href="#" class="btn btn-primary">Nous contacter</a>
 
-
+            <div class=" col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="{{ asset('images/IMG_8813ok.jpg')}}" width="50%"  alt="">
+                        <img src="{{ asset('images/play.png') }}" class="play-btn2" alt=""
+                             onclick="playVideo('{{ asset('images/2_bikutsiB_bpm100.mp4') }}')">
+                    </div>
+                    <p>Lorem ipsum dolor sit ipsum dolor sit A consequatur dicta
+                    </p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="{{ asset('images/IMG_8813ok.jpg')}}" width="50%"  alt="">
+                        <img src="{{ asset('images/play.png') }}" class="play-btn2" alt=""
+                             onclick="playVideo('{{ asset('images/3_bikutsiB_bpm100.mp4') }}')">
+                    </div>
+                    <p>Lorem ipsum dolor sit ipsum dolor sit A consequatur dicta
+                    </p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="{{ asset('images/IMG_8813ok.jpg')}}" width="50%"  alt="">
+                        <img src="{{ asset('images/play.png') }}" class="play-btn2" alt=""
+                             onclick="playVideo('{{ asset('images/4_bikutsiB_bpm100.mp4') }}')">
+                    </div>
+                    <p>Lorem ipsum dolor sit ipsum dolor sit A consequatur dicta
+                    </p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="{{ asset('images/IMG_8813ok.jpg')}}" width="50%"  alt="">
+                        <img src="{{ asset('images/play.png') }}" class="play-btn2" alt=""
+                             onclick="playVideo('{{ asset('images/5_bikutsiB_bpm100.mp4') }}')">
+                    </div>
+                    <p>Lorem ipsum dolor sit ipsum dolor sit A consequatur dicta
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container mt-4">
-
-        <p>
-            {{ cours.description  | nl2br}}
-        </p>
-            <div class="row">
-                <div class="col-md-8">
-                    <h2>Dans ce cours vous trouverez</h2>
-                    <table class="table table-striped">
-                        <tr>
-                            <td>Random</td>
-                            <td>{{ cours.parts }}</td>
-
-                        </tr>
-                        <tr>
-                            <td>Random</td>
-                            <td>{{ cours.genre }}</td>
-                        </tr>
-
-                        <tr>
-                            <td>Niveau</td>
-                            <td>{{ cours.niveauType }}</td>
-                        </tr>
-
-                    </table>
-
-                </div>
-                <div class="col-md-4">
-                    <h2>Spécificités</h2>
-                </div>
-            </div>
-
 
     </div>
 
+    <div class="video-player" id="videoPlayer">
+        <video width="90%" controls autoplay id="myVideo">
+               <source src="{{ asset('images/1_bikutsiB_bpm100.mp4') }}" type="video/mp4">
+        </video>
+        <img src="{{ asset('images/close_button.png') }}" class="close-btn"
+        onclick="stopVideo()">
+    </div>
+
+
+    {% block javascripts %}
+        <script src="{{asset('js/app.js') }}"></script>
+    {% endblock %}
 
 
 

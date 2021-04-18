@@ -5,6 +5,7 @@ namespace App\Controller;
 
 
 use App\Entity\Cours;
+use Cocur\Slugify\Slugify;
 use App\Repository\CoursRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ObjectManager;
