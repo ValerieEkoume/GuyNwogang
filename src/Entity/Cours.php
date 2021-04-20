@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\Traits\Timestampable;
 use App\Repository\CoursRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Cocur\Slugify\Slugify;
@@ -15,6 +16,8 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  */
 class Cours
 {
+    use Timestampable;
+
     const NIVEAU = [
         0 => 'Kops',
         1 => 'Kopss',
@@ -68,15 +71,6 @@ class Cours
      */
     private $parts;
 
-    /**
-     * @ORM\Column(type="datetime", options={"default": "CURRENT_TIMESTAMP"})
-     */
-    private $createdAt;
-
-    /**
-     * @ORM\Column(type="datetime", options={"default": "CURRENT_TIMESTAMP"})
-     */
-    private $updatedAt;
 
 
     public function __construct()
@@ -200,24 +194,7 @@ class Cours
         return $this->createdAt;
     }
 
-    public function setCreatedAt(\DateTimeInterface $created_at): self
-    {
-        $this->ceatedAt = $created_at;
 
-        return $this;
-    }
-
-    public function getUpdatedAt(): ?\DateTimeInterface
-    {
-        return $this->updatedAt;
-    }
-
-    public function setUpdatedAt(\DateTimeInterface $updatedAt): self
-    {
-        $this->updatedAt = $updatedAt;
-
-        return $this;
-    }
 
     public function updateTimeStamp()
     {
