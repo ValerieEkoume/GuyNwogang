@@ -71,6 +71,11 @@ class Cours
      */
     private $parts;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $imageName;
+
 
 
     public function __construct()
@@ -203,6 +208,18 @@ class Cours
         }
         $this->setUpdatedAt(new  \DateTimeImmutable());
 
+    }
+
+    public function getImageName(): ?string
+    {
+        return $this->imageName;
+    }
+
+    public function setImageName(?string $imageName): self
+    {
+        $this->imageName = $imageName;
+
+        return $this;
     }
 
 
