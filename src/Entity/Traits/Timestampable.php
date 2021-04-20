@@ -6,6 +6,8 @@ namespace App\Entity\Traits;
 
 use Doctrine\ORM\Mapping as ORM;
 
+//Permet d'utiliser le trait dans d'autres Entités en utilisant use + nom de l'entité
+
 trait Timestampable
 {
     /**
