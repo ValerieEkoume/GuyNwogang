@@ -11,6 +11,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 /**
  * @ORM\Entity(repositoryClass=CoursRepository::class)
  * @UniqueEntity("title")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Cours
 {
@@ -54,10 +55,7 @@ class Cours
      */
     private $niveau;
 
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    private $created_at;
+
 
     /**
      * @ORM\Column(type="boolean", options={"default":false})
@@ -70,10 +68,21 @@ class Cours
      */
     private $parts;
 
+    /**
+     * @ORM\Column(type="datetime", options={"default": "CURRENT_TIMESTAMP"})
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="datetime", options={"default": "CURRENT_TIMESTAMP"})
+     */
+    private $updatedAt;
+
 
     public function __construct()
     {
-        $this->created_at = new \DateTime();
+        $this->createdAt = new \DateTime();
+        $this->updatedAt = new \DateTime();
 
     }
 
@@ -159,17 +168,6 @@ class Cours
         return self ::NIVEAU[$this->niveau];
     }
 
-    public function getCreatedAt(): ?\DateTimeInterface
-    {
-        return $this->created_at;
-    }
-
-    public function setCreatedAt(\DateTimeInterface $created_at): self
-    {
-        $this->ceated_at = $created_at;
-
-        return $this;
-    }
 
     public function getFree(): ?bool
     {
@@ -196,4 +194,39 @@ class Cours
 
         return $this;
     }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $created_at): self
+    {
+        $this->ceatedAt = $created_at;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function updateTimeStamp()
+    {
+        if ($this->getCreatedAt() === null){
+            $this->setCreatedAt(new \DateTimeImmutable());
+        }
+        $this->setUpdatedAt(new  \DateTimeImmutable());
+
+    }
+
+
 }

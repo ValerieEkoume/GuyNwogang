@@ -18,7 +18,7 @@ class AccueilController extends AbstractController
      */
     public function accueil(CoursRepository $repository):Response
     {
-        $courses = $repository->findLatest();
+        $courses = $repository->findBy([], ['createdAt' => 'DESC']);
         return $this->render('cours/accueil.html.twig', [
             'courses' => $courses
         ]);

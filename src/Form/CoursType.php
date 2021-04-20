@@ -20,7 +20,8 @@ class CoursType extends AbstractType
             ->add('niveau', ChoiceType::class, [
                 'choices' =>$this->getChoices()
                 ])
-            ->add('created_at')
+            ->add('createdAt')
+            ->add('updatedAt')
             ->add('free')
             ->add('parts')
         ;
