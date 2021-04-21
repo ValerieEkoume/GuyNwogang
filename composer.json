@@ -38,7 +38,8 @@
         "symfony/yaml": "5.2.*",
         "symfonycasts/verify-email-bundle": "^1.4",
         "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "twig/twig": "^2.12|^3.0",
+        "vich/uploader-bundle": "^1.17"
     },
     "require-dev": {
         "symfony/maker-bundle": "^1.30",
