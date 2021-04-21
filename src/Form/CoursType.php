@@ -26,15 +26,14 @@ class CoursType extends AbstractType
             ->add('updatedAt')
             ->add('free')
             ->add('parts')
+            //Champs pour l'upload d'images dans la partie admin cours
             ->add('imageFile', VichImageType::class, [
                 'label' => 'Image (JPG or PNG file)',
                 'required' => false,
                 'allow_delete' => true,
-                'delete_label' => '...',
-                'download_label' => '...',
-                'download_uri' => true,
-                'image_uri' => true,
-                'asset_helper' => true,
+                'delete_label' => 'Supprimer',
+                'download_uri' => false,
+
             ])
         ;
     }

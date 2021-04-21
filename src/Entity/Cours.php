@@ -78,7 +78,7 @@ class Cours
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      *
      * @Vich\UploadableField(mapping="cours_image", fileNameProperty="imageName")
-     *
+     * @Assert\Image(maxSize="8M")
      * @var File|null
      */
     private $imageFile;
