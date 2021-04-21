@@ -34,62 +34,6 @@ main {
 
 
 
-
-
-
-
-/*.logo {*/
-/* font-family: 'Righteous', cursive;*/
-/* color: white;*/
-/* text-transform: uppercase;*/
-/* letter-spacing: 5px;*/
-/* font-weight: 900;*/
-/* !*font-size: 15px !important;*!*/
-/* margin-right: 45%;*/
-
-/*}*/
-
-/*.logo a {*/
-/* text-decoration: none!important;*/
-/* color: white!important;*/
-/*}*/
-
-
-
-/*.nav-links {*/
-/* display: flex;*/
-/* justify-content: space-around;*/
-/* width: 30%;*/
-
-/*}*/
-
-/*.nav-links a {*/
-/* font-family: 'Righteous', cursive;*/
-/* color: white;*/
-/* text-decoration: none;*/
-/* letter-spacing: 3px;*/
-/* font-weight: bold;*/
-/* font-size: 20px;*/
-/*}*/
-
-/*.nav-links li {*/
-/* list-style: none;*/
-/*}*/
-
-/*.burger {*/
-/* display: none;*/
-/* cursor: pointer;*/
-/*}*/
-
-/*.burger div {*/
-/* width: 25px;*/
-/* height: 3px;*/
-/* background: linear-gradient(to top, #eae3c8, #c2cab4, #a0b1a3, #849691, #6e7c7c);*/
-/* margin: 5px;*/
-/* transition: all 0.3s ease;*/
-
-/*}*/
-
 #bouton {
     position: absolute;
     top: 65%;
@@ -140,6 +84,22 @@ main {
 
 
 }
+
+/* BASE.HTML.TWIG */
+
+.vich-image  {
+    .form-check {
+        @extend .mt-3;
+    }
+    img {
+        @extend .mb-2;
+        @extend .rounded;
+        @extend .shadow;
+        @extend .img-thumbnail;
+    }
+}
+
+
 
 
 .jumbotron-img {

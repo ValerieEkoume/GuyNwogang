@@ -16,7 +16,7 @@ import './bootstrap';
 
 
 
-// Permet l'affichage du nom de l'image dans Create et Edit
+// Permet l'affichage du nom de l'image sélectionnée dans Create et Edit
 $('.custom-file-input').on('change', function (e) {
     var inputFile = e.currentTarget;
     $(inputFile).parents().find('.custom-file-label').html(inputFile.files[0].name);
