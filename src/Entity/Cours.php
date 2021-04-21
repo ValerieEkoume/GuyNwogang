@@ -82,7 +82,12 @@ class Cours
      * @var File|null
      */
     private $imageFile;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
     private $imageName;
+
 
 
     public function __construct()
