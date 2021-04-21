@@ -22,6 +22,7 @@ class CoursType extends AbstractType
                 ])
             ->add('createdAt')
             ->add('updatedAt')
+            ->add('imageName')
             ->add('free')
             ->add('parts')
         ;

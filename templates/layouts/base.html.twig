@@ -15,11 +15,13 @@
     <body>
     {{ include('layouts/partials/_nav.html.twig') }}
 
-    <main role="main">
+
         {% block body %}
 
+
+
         {% endblock %}
-    </main>
+
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
@@ -27,6 +29,8 @@
 
 
 <footer>
-    {% block footer %} {% endblock footer %}
+    {% block footer %}
+        {{ include('layouts/partials/_footer.html.twig') }}
+    {% endblock footer %}
 </footer>
 </html>
