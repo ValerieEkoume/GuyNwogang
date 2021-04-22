@@ -85,7 +85,18 @@ main {
 
 }
 
-/* BASE.HTML.TWIG */
+/* ACCUEIL.HTML.TWIG */
+
+
+
+
+
+
+.jumbotron-img {
+    background: rgb(237,116,88);
+    background: linear-gradient(302deg, rgba(237,116,88,1) 16%, rgba(51,61,81,1) 97%);
+    color: #fff;
+}
 
 .vich-image  {
     .form-check {
@@ -99,20 +110,12 @@ main {
     }
 }
 
-
-
-
-.jumbotron-img {
-    background: rgb(237,116,88);
-    background: linear-gradient(302deg, rgba(237,116,88,1) 16%, rgba(51,61,81,1) 97%);
-    color: #fff;
+.cours img {
+    transition: transform 0.3s ease-out;
+    &:hover {
+        transform: scale(1.075);
+    }
 }
-
-/*.q-container {*/
-/* border-top-right-radius: .25rem;*/
-/* border-top-left-radius: .25rem;*/
-/* background-color: #efefee;*/
-/*}*/
 
 .q-container-show {
     border-top-right-radius: .25rem;
@@ -149,6 +152,10 @@ main {
 .text-primary {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+article {
+    @extend .mr-4
 }
 
 /* ADMIN */

@@ -13,26 +13,33 @@
             harum, incidunt inventore ipsam iure labore laboriosam nesciunt numquam provident quae quos soluta totam veniam voluptates?</p>
     </div>
 
-    <div class="container">
-        <h2>Les nouveautés</h2>
-        <div class="flex-row">
-        {% for cours in courses %}
 
-            <div class="col-3">
-                <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="{{ path('cours.show', {id: cours.id, slug: cours.slug}) }}">{{ cours.title }}</a>
-                    </h5>
-                    <p class="card-tex">{{ cours.genre }} ({{ cours.niveauType }})</p>
-                </div>
-                </div>
+        <h2 class="mb-4 text-center">Les nouveautés</h2>
+
+
+            <div class="row mb-5">
+                {% for cours in courses  %}
+                    <div class="col-md-4">
+                        <article class="cours bg-white rounded shadow">
+                            <div class="mw-100 overflow-hidden">
+                                <a href="{{ path('cours.show', {id: cours.id, slug: cours.slug}) }}">
+                                    <img src="{{ (cours.imageName ? vich_uploader_asset(cours) :
+                                    asset('build/images/GN_thumbnail.ef61ec6f.jpg')) |
+                                    imagine_filter('squared_thumbnail_medium')}}" alt="{{ cours.title }}"
+                                         class="w-100 rounded-top"/>
+                                </a>
+                            </div>
+
+
+                            <h3 class="pl-3 pt-3"><a href="{{ path('cours.show', {id: cours.id, slug: cours.slug}) }}"
+                                    class="text-muted text-decoration-none">{{ cours.title }}
+                                </a></h3>
+                            <p class="pl-3 pb-3 text-muted">{{ cours.genre }} ({{ cours.niveauType }})</p>
+                        </article>
+                    </div>
+                {% endfor %}
             </div>
 
-        {% endfor %}
-        </div>
-
-    </div>
 
 
 {% endblock %}
