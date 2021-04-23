@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100&family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Permanent+Marker&family=Righteous&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap');
 @import "~bootstrap/scss/bootstrap";
 
 body {
@@ -11,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Heebo', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 
@@ -122,11 +124,12 @@ body {
 
 
 .navbar-nav a {
-    color: #630000 !important;
+    color: #4B4453 !important;
     font-weight: 600;
     font-size: 20px;
     margin-left: 50px!important;
     margin-top: 10px;
+    font-family: 'Kanit', sans-serif;
 }
 
 .navbar-toggler {
@@ -142,7 +145,7 @@ body {
 
 .nav-link:hover {
     font-weight: 600;
-    border-bottom: 1px solid #810000;
+    border-bottom: 1px solid #4B4453;
     margin-bottom: -1px;
 }
 
@@ -151,19 +154,40 @@ body {
 //    height: 300px; /* only for demonstration, should be removed */
 //    padding: 20px;
 //}
+.text-accueil h2{
+    font-weight: 600;
+    font-size: 60px;
+}
 
 .section-s1 {
-    height: 30vh;
+    height: 20vh;
     margin: 20px 50px;
-    padding: 10px 80px;
-    border: 1px solid black;
+    padding: 10px 100px;
+    //border: 1px solid black;
+}
+
+.section-s2 h2 {
+    margin-bottom: 5%;
+}
+
+.nav-ac h5 {
+    color: #1b1717!important;
+    font-weight: 600!important;
+}
+
+.nav-ac button:hover {
+    color: #AAAAAA;
+    background-color: #1b1717;
 }
 
 #tsCours {
-    border: 1px solid #2C73D2;
-    border-radius: 5px;
-    background-color: #2C73D2;
-    padding: 2px 2px;
+    //border: 1px solid #1b1717;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background-color: #FCF7FF;
+    color: #1b1717;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .nav-ac ul {
@@ -179,6 +203,13 @@ body {
 .nav-ac a{
     text-decoration: none;
     color: #1b1717;
+    font-weight: 400;
+}
+
+.nav-ac a:hover{
+
+    color: #B0A8B9;
+
 }
 
 .d-flex {

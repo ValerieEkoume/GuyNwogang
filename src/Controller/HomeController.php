@@ -20,7 +20,7 @@ class HomeController extends AbstractController
     public function home(CoursRepository $repository):Response
     {
 
-        return $this->render('home.html.twig');
+        return $this->render('GuyNwogang/home.html.twig');
     }
 
 
