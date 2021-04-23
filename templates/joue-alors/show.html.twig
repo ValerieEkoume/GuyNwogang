@@ -12,16 +12,22 @@
         <div class="ro">
             <div class="co">
                 <div class="feature-img">
-                    <img src="{{ asset('/images/IMG_8797ok2.jpg')}} " class="" width="110%" alt="Guy">
-                    <img src="{{ asset('images/play.png') }}" class="play-btn"
+                    <img src="{{ asset('build/images/GN_thumbnail.ef61ec6f.jpg')}} " class="" width="110%" alt="Guy">
+                    <img src="{{ asset('build/images/play.png') }}" class="play-btn"
                          onclick="playVideo('{{ asset('images/1_bikutsiB_bpm100.mp4') }}')">
                 </div>
+
+                    <small>
+                        Cours posté le
+                <time class="pl-3 pb-3 text-muted">{{ cours.createdAt | date('Y-m-d') }}</time>
+                    </small>
+
             </div>
 
             <div class=" col">
                 <div class="small-img-row">
                     <div class="small-img">
-                        <img src="{{ asset('images/IMG_8813ok.jpg')}}" width="50%"  alt="">
+                        <img src="{{ asset('IMG_8813ok.jpg')}}" width="50%"  alt="">
                         <img src="{{ asset('images/play.png') }}" class="play-btn2" alt=""
                              onclick="playVideo('{{ asset('images/2_bikutsiB_bpm100.mp4') }}')">
                     </div>
