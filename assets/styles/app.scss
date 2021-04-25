@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap');
 @import "~bootstrap/scss/bootstrap";
+//@import '~@videojs/themes/dist/fantasy/index.css';
 
 body {
     /*background-color: lightgray;*/
@@ -121,7 +122,9 @@ body {
     margin-left: 30%;
 }
 
-
+.navbar-nav {
+    position: absolute;
+}
 
 .navbar-nav a {
     color: #4B4453 !important;
@@ -262,21 +265,29 @@ section::after {
 
 /* SHOW */
 
-.co-container {
-    width: 80%;
-    margin: 80px auto;
+ #my-video{
+    //position: absolute;
+    //top: 20%;
+    // left: 32%;
 }
 
-.co-container .ro{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
+ .titre-show {
+     margin-top: 5%;
+ }
 
-.co-container .co {
-    flex-basis: 50%;
-    min-width: 250px;
-}
+ .container  {
+     margin-top: 5%;
+     width: 80%;
+     height: 70%;
+     border: 1px solid black;
+
+ }
+
+ .container .col {
+
+ }
+
+
 
 .feature-img{
     width: 83%;
@@ -351,6 +362,10 @@ section::after {
     cursor: pointer;
 }
 
+.video {
+    position: absolute;
+    top: 20%;
+}
 
 
 
