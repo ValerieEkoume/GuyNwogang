@@ -243,6 +243,7 @@ class Cours
             // otherwise the event listeners won't be called and the file is lost
             $this->setUpdatedAt(new \DateTimeImmutable);
         }
+
     }
 
     public function getImageFile(): ?File

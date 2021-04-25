@@ -9,7 +9,6 @@ use Cocur\Slugify\Slugify;
 use App\Repository\CoursRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ObjectManager;
-use PhpParser\Builder\Property;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -59,6 +58,8 @@ class CoursController extends AbstractController
                 'slug' => $cours->getSlug()
             ], 301);
         }
+
+
         return $this->render('joue-alors/show.html.twig', [
             'cours'=> $cours,
             'menu_cours' => 'courses'

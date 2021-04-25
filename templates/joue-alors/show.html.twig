@@ -36,14 +36,11 @@
         </div>
 
     <div class="col">
-
-        <ul>
-            <li>Introduction 1</li>
-            <li>Video 1</li>
-            <li>Video 1</li>
-            <li>Video 1</li>
-            <li>Video 1</li>
-        </ul>
+        {% for video in cours.videos %}
+        <ol class="list-group list-group-numbered">
+            <li class=""><a class="text-decoration-none text-muted" href="{{ video.videoLink }}">{{ video.videoTitle }}</a></li>
+        </ol>
+        {% endfor %}
     </div>
 
     </div>
