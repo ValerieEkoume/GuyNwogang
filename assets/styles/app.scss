@@ -7,45 +7,115 @@
 
 body {
     /*background-color: lightgray;*/
-}
 
+}
+body::-webkit-scrollbar {
+    display: none;
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans TC', sans-serif;
+
 }
-
-
 
 .landing{
-    min-height: 100vh;
     background: url("../images/GN_thumbnail.jpg");
     background-size: cover;
+    height: 100vh;
 
+    #sign {
+        width: 34%;
+        position: absolute;
+        left: 59%;
+        top: 10%;
+    }
 }
 
-.landing .btn {
-    border: 1px solid #FFFFFF;
-    margin-top: 20px;
-    padding: 6px 26px;
-    font-size: 16px;
-
+.about {
+    min-height: 100vh;
+    text-align: left;
+    color: black;
+    position: relative;
 }
 
-#logoJa {
-    margin-top: 10px;
-    width: 4%;
-}
-
-#sign {
-    width: 25%;
+.imgabo {
+    width: 50%;
+    height: 100vh;
     position: absolute;
-    left: 50%;
-    top: 15%;
+    object-fit: cover;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.content {
+    padding: 9em 5em;
+    z-index: 1;
+    position: relative;
+    color: #4B4453 ;
+
+    h2 {
+        font-size: 5em;
+        margin-bottom: 0;
+    }
+
+    p{
+        font-size: 1.6em;
+
+    }
+}
+
+.gears {
+    min-height: 100vh;
+    text-align: right;
+    color: black;
+    position: relative;
+}
+
+
+.content_gears {
+    padding: 9em 5em;
+    z-index: 1;
+    color: #4B4453 ;
+
+
+    h2 {
+        font-size: 5em;
+        margin-bottom: 0;
+    }
+
+    p{
+        font-size: 1.6em;
+        right: 1%;
+    }
+}
+
+.img_gears{
+    width: 30%;
 
 }
+
+.img_gears2{
+width: 30%;
+
+
+}
+
+.img_gears3{
+width: 30%;
+
+
+}
+
+
+
+
+
+
+
 
 /* ABOUT.HTML.TWIG */
 
@@ -164,16 +234,6 @@ body {
     font-size: 60px;
 }
 
-.section-s1 {
-    height: 20vh;
-    margin: 20px 50px;
-    padding: 10px 100px;
-    //border: 1px solid black;
-}
-
-.section-s2 h2 {
-    margin-bottom: 5%;
-}
 
 .nav-ac h5 {
     color: #1b1717!important;
@@ -221,11 +281,11 @@ body {
 
 }
 
-section::after {
-    content: "";
-    display: table;
-    clear: both;
-}
+//section::after {
+//    content: "";
+//    display: table;
+//    clear: both;
+//}
 
 
 @media (min-width: 768px) {
@@ -384,6 +444,12 @@ footer {
     .nav-links {
         color: black;
         width: 60%;
+    }
+
+    #sign {
+        position: absolute;
+        top: 20%;
+        left: 4%;
     }
 
 }

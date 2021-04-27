@@ -4,24 +4,76 @@
 
 
 
+{#    <section>#}
+{#        <h1 class="Onscroll"></h1>#}
+{#    </section>#}
 
-    <div class="landing">
 
-{#        <button class="btn btn-outline-light">#}
 
-{#        </button>#}
 
-        <a href="#"><img id="sign" src="{{ asset('build/images/thumbnail_SIGNATURE.08e41aac.png') }}" alt=""></a>
-    </div>
+    <section class="landing">
+        <img id="sign" src="{{ asset('build/images/thumbnail_SIGNATURE.08e41aac.png') }}" alt="">
+    </section>
 
+
+        <section class="about">
+            <div class="content">
+                <h2>ABOUT</h2>
+                <P>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+                </P>
+            </div>
+            <img class="imgabo" src="{{ asset('build/images/IMG_8813ok.4b09fa10.jpg') }}" alt="">
+        </section>
+
+    <section class="gears text-xl-center">
+        <div class="content">
+        <h2>GEARS</h2>
+        <P>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </P>
+        </div>
+        <div class="d-flex justify-content-between mx-5">
+            <img class="img_gears3" src="{{ asset('build/images/GN_vicF.jpeg') }}" alt="">
+            <img class="img_gears2" src="{{ asset('build/images/GN_Zildjan.jpeg') }}" alt="">
+            <img class="img_gears" src="{{ asset('build/images/IMG_6567.69ce7de3.jpg') }}" alt="">
+        </div>
+
+    </section>
+
+    <section class="about">
+        <div class="content">
+            <h2 class="text-xl-center">TOUR</h2>
+            <P>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </P>
+        </div>
+        <div class="row ml-3 ">
+{#            {% for cours in courses  %}#}
+                <div class="col-xs-6 col-sm-3">
+                    <article class="cours bg-white rounded shadow">
+                        <div class=" overflow-hidden">
+                            <h6 class="pl-3 pt-3">Date</h6>
+                            <a href="#"></a>
+                        </div>
+                        <h3 class="pl-3 pt-3">
+                            Ville - Pays</h3>
+                        <h5><a href="#" class="pl-3 pb-3 text-muted">TICKET</a></h5>
+                    </article>
+                </div>
+{#            {% endfor %}#}
+        </div>
+
+    </section>
 
 
 
 
 {#    <section class="about">#}
-{#        <div class="at-container">#}
+
 {#        <h2 class="">ABOUT</h2>#}
-{#        </div>#}
+
 {#        <div class="abt-container">#}
 {#            <iframe class="a-video" width="800" height="450"#}
 {#                    src="https://www.youtube.com/embed/zt77JsmEmLg">#}
@@ -29,6 +81,20 @@
 {#        </div>#}
 
 {#    </section>#}
+
+{#    <section class="about">#}
+
+{#        <h2 class="">ABOUT</h2>#}
+
+
+
+{#    </section>#}
+
+    {% block javascripts %}
+
+        {{ encore_entry_script_tags('app') }}
+
+    {% endblock %}
 
 {% endblock %}
 
