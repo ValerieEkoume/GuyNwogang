@@ -24,6 +24,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.3",
         "@videojs/themes": "^1.0.1",
         "fullpage": "^1.5.1",
         "fullpage.js": "^3.1.0",

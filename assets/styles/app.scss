@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100&family=Lobster&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap');
 @import "~bootstrap/scss/bootstrap";
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/brands';
 //@import '~@videojs/themes/dist/fantasy/index.css';
 
-body {
+html body {
+
     /*background-color: lightgray;*/
+
 
 }
 body::-webkit-scrollbar {
@@ -17,9 +26,10 @@ body::-webkit-scrollbar {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    //font-family: 'Abril Fatface', cursive;
     font-family: 'Noto Sans TC', sans-serif;
-
 }
+
 
 .landing{
     background: url("../images/GN_thumbnail.jpg");
@@ -60,6 +70,8 @@ body::-webkit-scrollbar {
     h2 {
         font-size: 5em;
         margin-bottom: 0;
+        font-family: 'Abril Fatface', cursive;
+
     }
 
     p{
@@ -71,7 +83,8 @@ body::-webkit-scrollbar {
 .gears {
     min-height: 100vh;
     text-align: right;
-    color: black;
+    background-color: #eeeeee;
+    color: white;
     position: relative;
 }
 
@@ -79,17 +92,20 @@ body::-webkit-scrollbar {
 .content_gears {
     padding: 9em 5em;
     z-index: 1;
-    color: #4B4453 ;
-
+    font-family: 'Abril Fatface', cursive;
 
     h2 {
         font-size: 5em;
         margin-bottom: 0;
+        color: #4B4453;
+        font-family: 'Abril Fatface', cursive;
+
     }
 
     p{
         font-size: 1.6em;
         right: 1%;
+        color: #4B4453;
     }
 }
 
@@ -99,16 +115,17 @@ body::-webkit-scrollbar {
 }
 
 .img_gears2{
-width: 30%;
-
+    width: 30%;
+    object-fit: cover;
 
 }
 
 .img_gears3{
-width: 30%;
-
+    width: 30%;
+    object-fit: cover;
 
 }
+
 
 
 
@@ -177,16 +194,16 @@ width: 30%;
     background-size: cover;
     color: #fff;
     border-radius: 0 !important;
+
 }
 
-.jumbotron h3 {
-    margin-top: 10%;
-    margin-left: 20%;
-}
-
-.intro h3 {
-    color: black;
-    font-weight: bolder;
+.jumbotron h1 {
+    margin-top: 8%;
+    margin-left: 60%;
+    font-family: 'Abril Fatface', cursive;
+    color: #4B4453;
+    font-size: 3em;
+    margin-bottom: 0;
 }
 
 .jumbotron img {
@@ -194,8 +211,17 @@ width: 30%;
     margin-left: 30%;
 }
 
+.text-accueil h2{
+    padding: 20px 30px;
+    font-size: 2em;
+    font-family: 'Abril Fatface', cursive;
+    color: #4B4453;
+}
+
 .navbar-nav {
     position: absolute;
+    top: 1%;
+    font-family: 'Abril Fatface', cursive;
 }
 
 .navbar-nav a {
@@ -223,17 +249,6 @@ width: 30%;
     border-bottom: 1px solid #4B4453;
     margin-bottom: -1px;
 }
-
-//.nav-ac-l {
-//    width: 30%;
-//    height: 300px; /* only for demonstration, should be removed */
-//    padding: 20px;
-//}
-.text-accueil h2{
-    font-weight: 600;
-    font-size: 60px;
-}
-
 
 .nav-ac h5 {
     color: #1b1717!important;
@@ -281,11 +296,77 @@ width: 30%;
 
 }
 
+.nav-socials {
+    position: absolute;
+    left: 85%;
+    top: 1%;
+}
+
+.socials li {
+    list-style: none;
+}
+
+.socials  a {
+    text-decoration: none;
+    color: #4B4453;
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+/* FOOTER.HTML.TWIG */
+
+
+//.btn-big {
+//    padding: .7rem 1.3rem;
+//    line-height: 1.3rem;
+//}
+
+
 //section::after {
 //    content: "";
 //    display: table;
 //    clear: both;
 //}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.footer .social  a {
+    text-decoration: none;
+    color: #FFFFFF;
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    transition: all .3s;
+}
+
+.footer .social  a:hover {
+    color: #4B4453;
+    transition: all .3s;
+}
+
+.footer .footer-bottom {
+    padding: 10px 20px;
+    position: absolute;
+    top: 20%;
+    left: 85%;
+}
 
 
 @media (min-width: 768px) {
@@ -343,9 +424,6 @@ width: 30%;
      height: 70%;
  }
 
- .container .col {
-
- }
 
 
 
@@ -437,9 +515,7 @@ width: 30%;
 
 
 
-footer {
-    background-color: #efefee;
-}
+
 @media screen and (max-width: 1024px){
     .nav-links {
         color: black;
@@ -468,3 +544,4 @@ footer {
 // height: 100%;
 // transition: opacity .5s;
 //}
+

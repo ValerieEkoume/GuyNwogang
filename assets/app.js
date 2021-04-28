@@ -41,6 +41,9 @@ let tl = gsap.timeline({
     }
 });
 
+
+
+
 tl.from(".imgabo", { x: 200, opacity: 0, duration: 1.5})
     .from(".content", { y: 300, opacity: 0, duration: 1}, '-=1')
 

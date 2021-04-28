@@ -10,84 +10,80 @@
     <div class="jumbotron text-center ">
         <div class="intro">
 {#            <img id="logoJa" src="{{ asset('build/images/logoJA.393c0749.png') }}" alt="">#}
-        <h3 class="">JOUE ALORS !</h3>
+        <h1 class="">JOUE ALORS !</h1>
 
         </div>
     </div>
+        <div class="text-accueil ">
+            <h2 class="text-center my-4"> Les nouveautés</h2>
+        </div>
+{#            <h3  class="text-center"></h3>#}
 
+        <div class=" d-flex justify-content-around mt-4">
 
-    <div class="text-accueil ">
-        <h2 class="text-center my-4"> Nous vous souhaitons la bienvenue !</h2>
-
-    </div>
-
-        <h2  class="text-center">Les nouveautés</h2>
-
-    <div class=" d-flex justify-content-around mt-4">
-
-        <div class="nav-ac" >
-                <button class="btn btn-lg btn" id="tsCours">Tous les Cours</button>
-            <br>
-            <br>
-                <h5 class="border-bottom">Par style</h5>
+            <div class="nav-ac" >
+                    <button class="btn btn-lg btn" id="tsCours">Tous les Cours</button>
+                <br>
+                <br>
+                    <h5 class="border-bottom">Par style</h5>
+                        <ul class="">
+                           <li><a href="#">Bikutsi</a></li>
+                            <li><a href="#">Bensikin</a></li>
+                            <li><a href="#">Rock-Bikutsi</a></li>
+                            <li><a href="#">Le coin des Mbindis</a></li>
+                        </ul>
+                    <h5 class="border-bottom">Par niveau</h5>
+                        <ul class="">
+                            <li><a href="#">Kop - Débutants</a></li>
+                            <li><a href="#">KopSs - Amateurs</a></li>
+                            <li><a href="#">KopSs - Intermédiaires</a></li>
+                            <li><a href="#">KopSss - Confirmés</a></li>
+                        </ul>
+                    <h5 class="border-bottom">Nos Playlist</h5>
                     <ul class="">
-                       <li><a href="#">Bikutsi</a></li>
-                        <li><a href="#">Bensikin</a></li>
+                        <li><a href="#">Bikutsi</a></li>
+                        <li><a href="#">Pop</a></li>
                         <li><a href="#">Rock-Bikutsi</a></li>
-                        <li><a href="#">Le coin des Mbindis</a></li>
+                        <li><a href="#">Bensikin</a></li>
                     </ul>
-                <h5 class="border-bottom">Par niveau</h5>
-                    <ul class="">
-                        <li><a href="#">Kop - Débutants</a></li>
-                        <li><a href="#">KopSs - Amateurs</a></li>
-                        <li><a href="#">KopSs - Intermédiaires</a></li>
-                        <li><a href="#">KopSss - Confirmés</a></li>
-                    </ul>
-                <h5 class="border-bottom">Nos Playlist</h5>
-                <ul class="">
-                    <li><a href="#">Bikutsi</a></li>
-                    <li><a href="#">Pop</a></li>
-                    <li><a href="#">Rock-Bikutsi</a></li>
-                    <li><a href="#">Bensikin</a></li>
-                </ul>
 
-        </div>
-
-        <div class="nouveaute">
-
-            <div class="row ml-3 ">
-                {% for cours in courses  %}
-                    <div class="col-xs-6 col-sm-3">
-                        <article class="cours bg-white rounded shadow">
-                            <div class=" overflow-hidden">
-                                <a href="{{ path('cours.show', {id: cours.id, slug: cours.slug}) }}">
-                                    <img src="{{ (cours.imageName ? vich_uploader_asset(cours) :
-                                    asset('build/images/GN_thumbnail.ef61ec6f.jpg')) |
-                                    imagine_filter('squared_thumbnail_medium')}}" alt="{{ cours.title }}"
-                                         class="w-100 rounded-top"/>
-                                </a>
-                            </div>
-                            <h3 class="pl-3 pt-3"><a href="{{ path('cours.show', {id: cours.id, slug: cours.slug}) }}"
-                                    class="text-muted text-decoration-none">{{ cours.title }}
-                                </a></h3>
-                            <p class="pl-3 pb-3 text-muted">{{ cours.genre }} ({{ cours.niveauType }})</p>
-                        </article>
-                    </div>
-                {% endfor %}
             </div>
 
+            <div class="nouveaute">
+
+                <div class="row ml-3 ">
+                    {% for cours in courses  %}
+                        <div class="col-xs-6 col-sm-3">
+                            <article class="cours bg-white rounded shadow">
+                                <div class=" overflow-hidden">
+                                    <a href="{{ path('cours.show', {id: cours.id, slug: cours.slug}) }}">
+                                        <img src="{{ (cours.imageName ? vich_uploader_asset(cours) :
+                                        asset('build/images/GN_thumbnail.ef61ec6f.jpg')) |
+                                        imagine_filter('squared_thumbnail_medium')}}" alt="{{ cours.title }}"
+                                             class="w-100 rounded-top"/>
+                                    </a>
+                                </div>
+                                <h3 class="pl-3 pt-3"><a href="{{ path('cours.show', {id: cours.id, slug: cours.slug}) }}"
+                                        class="text-muted text-decoration-none">{{ cours.title }}
+                                    </a></h3>
+                                <p class="pl-3 pb-3 text-muted">{{ cours.genre }} ({{ cours.niveauType }})</p>
+                            </article>
+                        </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+
         </div>
 
 
-    </div>
+        <div class="text-center mt-5">
+            <h5 class="btn btn-light"><a href="#" class=" text-muted text-decoration-none ">Tous les cours</a></h5>
+        </div>
 
 
-    <div class="text-center mt-5">
-        <h5 class="btn btn-light"><a href="#" class=" text-muted text-decoration-none ">Tous les cours</a></h5>
-    </div>
-
-
-
+{#        <div class="nouveaute">#}
 
 
 {% endblock %}
