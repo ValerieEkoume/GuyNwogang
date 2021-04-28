@@ -292,7 +292,7 @@ body::-webkit-scrollbar {
 
 
 .footer {
-    position: fixed;
+    position: sticky;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -301,29 +301,30 @@ body::-webkit-scrollbar {
     text-align: center;
 }
 
-.footer .social  a {
-    text-decoration: none;
-    color: #FFFFFF;
-    width: 45px;
-    height: 41px;
-    padding-top: 5px;
-    text-align: center;
-    display: inline-block;
-    font-size: 1.3em;
-    transition: all .3s;
-}
+//.footer .social  a {
+//    text-decoration: none;
+//    color: #FFFFFF;
+//    width: 45px;
+//    height: 41px;
+//    padding-top: 5px;
+//    text-align: center;
+//    display: inline-block;
+//    font-size: 1.3em;
+//    transition: all .3s;
+//}
 
-.footer .social  a:hover {
-    color: #4B4453;
-    transition: all .3s;
-}
+//.footer .social  a:hover {
+//    color: #4B4453;
+//    transition: all .3s;
+//}
 
-.footer .footer-bottom {
-    padding: 10px 20px;
-    position: absolute;
-    top: 20%;
-    left: 85%;
-}
+//.footer .footer-bottom {
+//    padding: 10px 20px;
+//
+//    position: absolute;
+//    top: 20%;
+//    left: 85%;
+//}
 
 
 @media (min-width: 768px) {
