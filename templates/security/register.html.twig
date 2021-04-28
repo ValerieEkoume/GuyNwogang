@@ -3,6 +3,13 @@
     {% block title 'Inscription' %}
 
     {% block body %}
+
+        <div class="jumbotron-2 text-center ">
+            <div class="intro">
+                <h3 class="">DEVIENS MEMBRE ALORS !</h3>
+
+            </div>
+        </div>
         <h1 class=" mt-4  text-center">Créer un compte</h1>
 
         {% for message in app.flashes('success') %}
@@ -20,7 +27,7 @@
         <div class=" mt-4 container">
         {{ form_start(registrationForm) }}
         {{ form_widget(registrationForm) }}
-            <button type="submit" class="btn btn-primary">Envoyer</button>
+            <button type="submit" class="btn btn-lg btn-dark mt-3">Envoyer</button>
         {{ form_end(registrationForm) }}
 
 
