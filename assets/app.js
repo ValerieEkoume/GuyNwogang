@@ -51,3 +51,4 @@ tl.from(".imgabo", { x: 200, opacity: 0, duration: 1.5})
 
 // tl.from(".content_gears", { y: 300, opacity: 0, duration: 1})
 //     .from(".img_gears", { x: 200, opacity: 0, duration: 1.5})
+

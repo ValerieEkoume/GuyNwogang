@@ -1,23 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100&family=Lobster&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap');
 @import "~bootstrap/scss/bootstrap";
+
 $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/brands';
+
 //@import '~@videojs/themes/dist/fantasy/index.css';
 
-html body {
+@import "menu";
 
-    /*background-color: lightgray;*/
-
-
+:root {
+    --primary-color: rgba(13, 110, 139, 0.45);
+    --overlay-color: rgba(24, 39, 51, 0.85);
+    --menu-speed: 0.75s;
 }
+
 body::-webkit-scrollbar {
     display: none;
 }
@@ -26,8 +30,76 @@ body::-webkit-scrollbar {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    //font-family: 'Abril Fatface', cursive;
-    font-family: 'Noto Sans TC', sans-serif;
+
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 3rem;
+}
+
+.showcase {
+    //background-color: var(--primary-color);
+    color: #FFFFFF;
+    height: 100vh;
+    position: relative;
+}
+
+.showcase:before {
+    content: '';
+    background: url("../images/IMG_8813ok.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.showcase .showcase-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    #sign {
+        width: 33%;
+        position: absolute;
+        top: 25%;
+        left: 0;
+    }
+}
+
+.showcase h1 {
+    font-size: 4rem;
+}
+
+.showcase p {
+    font-size: 1.3rem;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: opacity 1s ease-in;
+}
+
+.btn:hover {
+    opacity: 0.7;
+
 }
 
 
@@ -36,11 +108,20 @@ body::-webkit-scrollbar {
     background-size: cover;
     height: 100vh;
 
-    #sign {
-        width: 34%;
+
+
+    #btn-ja {
         position: absolute;
-        left: 59%;
-        top: 10%;
+        top: 56%;
+        left: 78%;
+        text-decoration: none;
+        color: #4B4453;
+        font-family:'Abril Fatface', cursive;
+        font-size: 2.5rem;
+        border: 2px solid #4B4453;
+        border-radius: 5px;
+
+
     }
 }
 
@@ -187,37 +268,7 @@ body::-webkit-scrollbar {
     color: #4B4453;
 }
 
-.navbar-nav {
-    position: absolute;
-    top: 1%;
-    font-family: 'Abril Fatface', cursive;
-}
 
-.navbar-nav a {
-    color: #4B4453 !important;
-    font-weight: 600;
-    font-size: 20px;
-    margin-left: 50px!important;
-    margin-top: 10px;
-    font-family: 'Kanit', sans-serif;
-}
-
-.navbar-toggler {
-    color: black !important;
-    border: none !important;
-    outline: none !important;
-}
-
-.navbar-toggler .fa {
-    color: black;
-    font-size: 30px;
-}
-
-.nav-link:hover {
-    font-weight: 600;
-    border-bottom: 1px solid #4B4453;
-    margin-bottom: -1px;
-}
 
 .nav-ac h5 {
     color: #1b1717!important;
@@ -362,25 +413,25 @@ body::-webkit-scrollbar {
     color: red;
 }
 
-                                    /* ------ COURS ------ */
+/* ------ COURS ------ */
 
 /* SHOW */
 
- #my-video{
+#my-video{
     //position: absolute;
     //top: 20%;
     // left: 32%;
 }
 
- .titre-show {
-     margin-top: 5%;
- }
+.titre-show {
+    margin-top: 5%;
+}
 
- .container  {
-     margin-top: 5%;
-     width: 80%;
-     height: 70%;
- }
+//.container  {
+//    margin-top: 5%;
+//    width: 80%;
+//    height: 70%;
+//}
 
 
 
@@ -465,7 +516,7 @@ body::-webkit-scrollbar {
 
 
 
-                                        /* ------ ADMIN ------ */
+/* ------ ADMIN ------ */
 
 /* DELETE */ /* LOGIN*/
 
@@ -495,7 +546,7 @@ body::-webkit-scrollbar {
 
 
 
-        /* ----- VIDEO EN LARGE ABOUT -----*/
+/* ----- VIDEO EN LARGE ABOUT -----*/
 //.a-video {
 //    position: absolute;
 // top: 100%;
@@ -506,4 +557,3 @@ body::-webkit-scrollbar {
 // height: 100%;
 // transition: opacity .5s;
 //}
-
