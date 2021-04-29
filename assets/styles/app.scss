@@ -15,26 +15,28 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 //@import '~@videojs/themes/dist/fantasy/index.css';
 
 @import "menu";
+@import "footer";
 
 :root {
     --primary-color: rgba(13, 110, 139, 0.45);
     --overlay-color: rgba(24, 39, 51, 0.85);
     --menu-speed: 0.75s;
 }
-
+html {
+    height: 100%;
+}
 body::-webkit-scrollbar {
     display: none;
 }
 
-*{
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-
-}
-body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -70,12 +72,7 @@ body {
     justify-content: center;
     text-align: center;
     height: 100%;
-    #sign {
-        width: 33%;
-        position: absolute;
-        top: 25%;
-        left: 0;
-    }
+
 }
 
 .showcase h1 {
@@ -110,18 +107,11 @@ body {
 
 
 
-    #btn-ja {
+    #sign {
+        width: 40%;
         position: absolute;
-        top: 56%;
-        left: 78%;
-        text-decoration: none;
-        color: #4B4453;
-        font-family:'Abril Fatface', cursive;
-        font-size: 2.5rem;
-        border: 2px solid #4B4453;
-        border-radius: 5px;
-
-
+        top: 10%;
+        left: 58%;
     }
 }
 
@@ -338,44 +328,6 @@ body {
     border-radius: 5px;
     transition: all .3s;
 }
-
-/* FOOTER.HTML.TWIG */
-
-
-.footer {
-    position: sticky;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-    color: #FFFFFF;
-    text-align: center;
-}
-
-//.footer .social  a {
-//    text-decoration: none;
-//    color: #FFFFFF;
-//    width: 45px;
-//    height: 41px;
-//    padding-top: 5px;
-//    text-align: center;
-//    display: inline-block;
-//    font-size: 1.3em;
-//    transition: all .3s;
-//}
-
-//.footer .social  a:hover {
-//    color: #4B4453;
-//    transition: all .3s;
-//}
-
-//.footer .footer-bottom {
-//    padding: 10px 20px;
-//
-//    position: absolute;
-//    top: 20%;
-//    left: 85%;
-//}
 
 
 @media (min-width: 768px) {

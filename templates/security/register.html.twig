@@ -4,13 +4,13 @@
 
     {% block body %}
 
-        <div class="jumbotron-2 text-center mb-5">
+        <div class="jumbotron-2 text-center mb-4">
             <div class="intro">
                 <h3 class="">DEVIENS MEMBRE ALORS !</h3>
 
             </div>
         </div>
-        <h1 class=" my-5  text-center">Créer un compte</h1>
+        <h1 class=" my-3  text-center">Créer un compte</h1>
 
         {% for message in app.flashes('success') %}
             <div class="flash-notice">
@@ -27,7 +27,7 @@
         <div class=" my-5 container">
         {{ form_start(registrationForm) }}
         {{ form_widget(registrationForm) }}
-            <button type="submit" class="btn btn-lg btn-dark my-5">Envoyer</button>
+            <button type="submit" class="btn btn-lg btn-dark my-3">Envoyer</button>
         {{ form_end(registrationForm) }}
 
             <h6 class="text-center mt-3">Déjà membre ? <a href="{{ path('app_register') }}">Connectez-vous.</a></h6>

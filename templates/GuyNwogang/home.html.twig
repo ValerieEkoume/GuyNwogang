@@ -2,12 +2,23 @@
 {% block title 'Guy Nwogang' %}
 {% block body %}
 
-    <header class="showcase">
-        <div class="container showcase-inner">
-           <a href="#"><img id="sign" src="{{ asset('build/images/thumbnail_SIGNATURE.08e41aac.png') }}" alt=""></a>
-        </div>
-    </header>
+        <section class="landing">
+
+            <img src="{{ asset('build/images/thumbnail_SIGNATURE.08e41aac.png') }}" id="sign" alt="">
+
+        </section>
+
+
+    {% block javascripts %}
+
+        {{ encore_entry_script_tags('app') }}
+
+    {% endblock %}
 
 {% endblock %}
+
+
+
+
 
 
