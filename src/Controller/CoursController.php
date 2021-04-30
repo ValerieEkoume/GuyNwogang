@@ -4,7 +4,14 @@
 namespace App\Controller;
 
 
+use App\Entity\Contact;
 use App\Entity\Cours;
+use App\Entity\CoursSearch;
+use App\Form\ContactType;
+use App\Form\CoursSearchType;
+use App\Notification\ContactNotification;
+use App\Repository\CoursSearchRepository;
+use App\services\Mailer;
 use Cocur\Slugify\Slugify;
 use App\Repository\CoursRepository;
 use ContainerJzqKyrK\PaginatorInterface_82dac15;
@@ -40,38 +47,62 @@ class CoursController extends AbstractController
     * @param CoursRepository $repository
     * @return Response
     */
-   public function joueAlors(PaginatorInterface $paginator, Request $request): Response
-   {
+    public function joueAlors(PaginatorInterface $paginator, Request $request): Response
+    {
+        $search = new CoursSearch();
+        $form = $this->createForm(CoursSearchType::class, $search);
+        $form->handleRequest($request);
 
-      $courses = $paginator ->paginate(
-          $this->repository->findAllVisibleQuery(),
+        $courses = $paginator ->paginate(
+            $this->repository->findAllVisibleQuery(),
             $request->query->getInt('page', 1),
-          3
-   );
+            3
+        );
 //            $courses[1]->setFree(false);
 //            $this->em->flush();
-            return  $this->render('cours/joue-alors.html.twig', [
-           'courses' => $courses
-       ]);
-   }
+        return  $this->render('cours/joue-alors.html.twig', [
+            'courses' => $courses,
+            'form'    => $form->createView()
+        ]);
+    }
 
     /**
      * @Route ("/joue-alors/{slug}-{id}", name="cours.show", requirements={"slug": "[a-z0-9\-]*"})
      * @return Response
      */
-   public function show(Cours $cours, string $slug) : Response
+   public function show(Cours $cours, string $slug, Request $request, ContactNotification $notification) : Response
    {
+
+
         if ($cours->getSlug() !== $slug) {
             return $this->redirectToRoute('cours.show', [
                 'id' => $cours->getId(),
                 'slug' => $cours->getSlug()
+
             ], 301);
         }
+       $contact =new Contact();
+       $contact->setCours($cours);
+       $form = $this->createForm(ContactType::class, $contact);
+       $form->handleRequest($request);
 
+       if ($form->isSubmitted() && $form->isValid()) {
+           $notification->notify($contact);
+           $this->addFlash('success', 'Votre email a bine été envoyé');
+           /*
+           return $this->redirectToRoute('cours.show', [
+               'id' => $cours->getId(),
+                'slug' => $cours->getSlug()
+
+            ]);
+           */
+       }
 
         return $this->render('joue-alors/show.html.twig', [
             'cours'=> $cours,
-            'menu_cours' => 'courses'
+            'menu_cours' => 'courses',
+            'form'      => $form->createView()
+
 
         ]);
    }

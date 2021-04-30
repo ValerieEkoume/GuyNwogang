@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Form\FormTypeInterface;
 
 class CoursSearch
 {

@@ -1,32 +1,59 @@
 <?php
 
-
 namespace App\Form;
 
-
+use App\Entity\Contact;
+use App\Entity\CoursSearch;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-class ContactType
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\FormTypeInterface;
+
+class ContactType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
             ->add('firstname', TextType::class)
             ->add('lastname', TextType::class)
-            ->add('email', TextType::class)
-            ->add('message', TextareaType::class);
+            ->add('email', EmailType::class)
+            ->add('message', TextareaType::class)
+        ;
     }
 
-
-    public function getDefaultOptions(array $options)
+    public function configureOptions(OptionsResolver $resolver)
     {
-        return array('data_class'=>'Acme\AccountBundle\Entity\User');
-    }
+        $resolver->setDefaults([
+            'data_class'=> Contact::class
 
-    public function getName()
-    {
-        return 'user';
-    }
 
+        ]);
+    }
 }
+
+//class ContactType
+//{
+//    public function buildForm(FormBuilderInterface $builder, array $options)
+//    {
+//        $builder
+//            ->add('firstname', TextType::class)
+//            ->add('lastname', TextType::class)
+//            ->add('email', TextType::class)
+//            ->add('message', TextareaType::class);
+//    }
+//
+//
+//    public function getDefaultOptions(OptionsResolver $resolver)
+//    {
+//        $resolver->setDefaults([
+//            'data_class'=> Contact::class]
+//        );
+//    }
+//
+//
+//
+//}

@@ -4,7 +4,23 @@
 
 {% block body %}
 
-
+    <div class="jumbotron">
+        <div class="container  mt-5 mr-5">
+            {{ form_start(form) }}
+            <div class="form-row">
+                <div class="col">
+                    {{ form_row(form.genre) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.niveau) }}
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary">Recherche</button>
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
 
     <div class="container mt-4">
            <h1>Voir tous les cours</h1>
@@ -15,19 +31,18 @@
            </div>
             {% endfor %}
        </div>
-
-
-
+        <div class="pagination">
+            {{ knp_pagination_render(courses) }}
+        </div>
+        <div class="text-center mb-5">
+            <h5 class="btn btn-light"><a href="{{ path('app_cours') }}" class=" text-muted text-decoration-none ">Les nouveautés</a></h5>
+        </div>
    </div>
 
 
-{#    <div class="text-center mb-5">#}
-{#        <h5 class="btn btn-light"><a href="{{ path('app_cours') }}" class=" text-muted text-decoration-none ">Les nouveautés</a></h5>#}
-{#    </div>#}
 
 
 
-    <div class="pagination">
-        {{ knp_pagination_render(courses) }}
-    </div>
+
+
 {% endblock %}

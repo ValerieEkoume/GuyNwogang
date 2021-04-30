@@ -4,6 +4,18 @@
 
 
 {% block body %}
+^{% for message in app.flashes('success') %}
+<div class="flash-notice">
+    {{ message }}
+</div>
+{% endfor %}
+
+{% if not form.vars.valid %}
+    <div class="alert-danger">
+        Erreur, les champs n'ont pas été correctement remplis !
+    </div>
+
+{% endif %}
 <div class="titre-show">
     <h2 class="text-center">
         {{ cours.description  | nl2br}}
@@ -25,6 +37,7 @@
     >
         <source src="{{ asset('build/images/1_bikutsiB_bpm100.be32ed6d.mp4') }}" type="video/mp4" />
 {#        <source src="MY_VIDEO.webm" type="video/webm" />#}
+        {
         <p class="vjs-no-js">
             To view this video please enable JavaScript, and consider upgrading to a
             web browser that
@@ -35,6 +48,8 @@
     </video>
         </div>
 
+
+
     <div class="col">
         {% for video in cours.videos %}
         <ol class="list-group list-group-numbered">
@@ -42,13 +57,30 @@
         </ol>
         {% endfor %}
     </div>
+{#        <a href="#" class="btn btn-primary">Nous contacter</a>#}
+        <div id="contactForm" class="mt-4">
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col">{{ form_row(form.firstname) }}</div>
+                <div class="col">{{ form_row(form.lastname) }}</div>
+            </div>
+
+            <div class="row">
+                <div class="col">{{ form_row(form.email) }}</div>
+            </div>
+            {{ form_rest(form) }}
+            <div class="form-group">
+                <button class="btn btn-primary">Envoyer</button>
+            </div>
+            {{ form_end(form) }}
+        </div>
 
     </div>
 
     </div>
 
 
-</div>
+
 {#            <p class="text-center">#}
 {#                {{ cours.description  | nl2br}}#}
 {#            </p>#}
