@@ -1,5 +1,22 @@
-{% extends 'layouts/base.html.twig' %}
-{% block title 'Guy Nwogang' %}
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Guy Nwogang{% endblock %}</title>
+    <link href="{{ asset('https://vjs.zencdn.net/7.11.4/video-js.css')  }}" rel="stylesheet" />
+    {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+
+    {% endblock %}
+
+
+</head>
+
+<body>
+
+{{ include('layouts/partials/_nav.html.twig') }}
 {% block body %}
 
         <section class="landing">
@@ -7,7 +24,7 @@
             <img src="{{ asset('build/images/thumbnail_SIGNATURE.08e41aac.png') }}" id="sign" alt="">
 
         </section>
-
+{% endblock %}
 
     {% block javascripts %}
 
@@ -15,7 +32,7 @@
 
     {% endblock %}
 
-{% endblock %}
+
 
 
 

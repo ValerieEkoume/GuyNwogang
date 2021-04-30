@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Cours;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\Query;
 use Doctrine\ORM\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -23,15 +24,13 @@ class CoursRepository extends ServiceEntityRepository
 
 
     /**
-     * @return Cours[]
+     * @return Query
      */
 
-
-    public function findAllVisible(): array
+    public function findAllVisibleQuery(): Query
     {
         return $this->findVisibleQuery()
-            ->getQuery()
-            ->getResult();
+            ->getQuery();
     }
 
     /**
@@ -50,6 +49,7 @@ class CoursRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('c')
             ->where('c.free = false');
+
     }
 
     // /**
@@ -80,5 +80,6 @@ class CoursRepository extends ServiceEntityRepository
         ;
     }
     */
+
 
 }

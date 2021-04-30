@@ -29,7 +29,7 @@ const tlm = gsap.timeline({defaults: {ease: "power1.out"}});
 tlm.fromTo("nav", {opacity: 0}, { opacity: 1, duration: 1});
 tlm.fromTo("#sign", {opacity: 0}, { opacity: 1, duration: 1.5});
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 //
 // let tl = gsap.timeline({
 //     scrollTrigger: {
