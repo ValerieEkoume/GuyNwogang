@@ -3,42 +3,53 @@
 {% block body %}
 
 
-    <div class="page-wrapper">
+    <div  class="page-wrapper">
 
         <section class="about">
 
             <div class="content">
                 <h2>A PROPOS</h2>
-                <P>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <h3>
+                    Dipita na wélisanè qui signifie foi et persévérance en langue Duala du Cameroun sont les mots qui
+                    résument le mieux la philosophie de vie de Guy NWOGANG.
 
-                </P>
+
+                </h3>
+
+                <p>
+                    Après avoir fait ses armes au Cameroun avec de nombreux artistes réputés,  dès son arrivé en France
+                    dans les années 2000 il gravit doucement les échelons et  enchaîne bientôt des tournées à travers le
+                    monde avec des artistes internationaux comme <span>STEVIE WONDER</span> , <span>SALIK KEITA</span>
+                    et <span>MANU DIBANGO</span> qu'il accompagnera d’ailleurs en tant que batteur jusqu’à sa triste disparition en mars 2020.
+                    <br>
+                    A cela s'ajoute, des collaboration très régulièrement sur le projet
+                    de production de plusieurs artistes notamment <span><u><a href="{{ asset('https://www.james-bks.com/') }}">JAMES BKS</a></u></span>
+                    ou encore <span><u><a href="{{ asset('http://valerieekoume.fr') }}">VALERIE EKOUME</a></u></span>
+                    pour qui il a composé, aranger de nombreux albums, dont notamment  l’opus KWIN NA KINGUÈ qui a intégré
+                    le <span>TOP 10 RFI</span> des albums de
+                    musique du monde/Afrique 2017.
+                    <br>
+                    Guy NWOGANG fait partie de ces artistes à plusieurs facettes qui décline leur art d’autant de manière
+                    que se peut. En plus de ses activités scénique et de production dans lesquelles il excelle, ce
+                    batteur percussionniste a également publié des méthodes pédagogique de batterie et de percussions
+                    dans le but de transmettre son amour des rythmes camerounais au plus grand nombre.
+                    <br>
+                    <span class="ja"><u><a href="{{ path('app_joue-alors') }}">JOUE ALORS !</a></u></span>  la
+                    plateforme de cours de batterie en ligne est d'ailleurs la continuité de cet envie de transmettre,
+                    sont but étant de donner l'accès au plus grand nombre aux rythmes d'Afrique entre autre.
+                    Avec plusieurs cordes à son arc, Guy NWOGANG fait partie de cette génération de musiciens n’ayant
+                    de cesse de valoriser les musiques et les rythmes d’Afrique.
+                </p>
             </div>
             <img class="imgabo" src="{{ asset('build/images/IMG_8813ok.4b09fa10.jpg') }}" alt="">
         </section>
 
-        <section class="gears text-xl-center">
-            <div class="content_gears">
-                <h2>GEARS</h2>
-                <P>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </P>
-            </div>
-            <div class="d-flex justify-content-between mx-5">
-                <img class="img_gears" src="{{ asset('build/images/GN_vicF.211307e1.jpeg') }}" alt="">
-                <img class="img_gears2" src="{{ asset('build/images/GN_Zildjian.86808708.jpeg') }}" alt="">
-                <img class="img_gears3" src="{{ asset('build/images/IMG_6567.69ce7de3.jpg') }}" alt="">
-            </div>
 
-        </section>
-
-
-
-        <section class="about">
-            <div class="content">
+        <section class="tour">
+            <div class="content_tour">
                 <h2 class="text-xl-center">TOUR</h2>
-                <P>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <P class="text-center">
+                   Toutes les dates de concerts
                 </P>
             </div>
             <div class="row ml-3 ">
@@ -60,6 +71,50 @@
         </section>
 
     </div>
+
+        <section class="gears text-xl-center">
+            <div class="content_gears">
+                <h2>GEARS</h2>
+                <P class="font-weight-light">
+                   Cliquez sur les images ci-dessous pour savoir quelle équipements Guy utilise au quotidien
+                    autant pour la pratique que pour ses concerts.
+
+                </P>
+            </div>
+
+            <div class="row ">
+                <div class="column">
+                    <a href="{{ asset('https://zildjian.com/guy-nwogang.html') }}">
+                        <img class="img_gears" src="{{ asset('build/images/zildjian-logo.43e97784.jpg') }}" alt="">
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="{{ asset('https://pearldrum.com/eu/artist/guy-nwogang/13836') }}">
+                        <img class="img_gears" src="{{ asset('build/images/logo_pearl.149a74fb.jpg') }}" alt="">
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="{{ asset('https://vicfirth.zildjian.com/guy-nwogang-vf.html') }}">
+                        <img class="img_gears" src="{{ asset('build/images/logo_vf2.28a9eb1d.jpg') }}" alt="">
+                    </a>
+                </div>
+
+
+            </div>
+            <div class="row ">
+                <div class="column">
+                    <a href="{{ asset('https://www.terreson.com/index.html') }}">
+                        <img class="img_gears" src="{{ asset('build/images/logo_atelier.92edd2f1.jpg') }}" alt="">
+                    </a>
+                </div>
+{#                <div>#}
+{#                    <img class="img_gears" src="{{ asset('build/images/IMG_6567.69ce7de3.jpg') }}" alt="">#}
+{#                </div>#}
+            </div>
+
+        </section>
+
+
 
 
 

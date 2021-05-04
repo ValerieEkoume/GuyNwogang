@@ -1,0 +1,28 @@
+.tour {
+  min-height: 100vh;
+  position: relative;
+  //margin-top: 2%;
+  background-color: #eeeeee;
+}
+
+.content_tour {
+  padding: 5em 5em;
+  z-index: 1;
+
+
+  h2 {
+    font-size: 5em;
+    margin-bottom: 0;
+    color: #4B4453;
+    font-family: 'Abril Fatface', cursive;
+
+  }
+
+  p{
+    font-size: 1.6em;
+    right: 1%;
+    color: #4B4453;
+    padding-top: 1em;
+  }
+
+}

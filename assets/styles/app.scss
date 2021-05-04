@@ -16,10 +16,13 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
 @import "menu";
 @import "footer";
+@import "about";
+@import "gear";
+@import "tour";
 
 :root {
     --primary-color: rgba(13, 110, 139, 0.45);
-    --overlay-color: rgba(24, 39, 51, 0.85);
+    --overlay-color: rgba(24, 39, 51, 0.40);
     --menu-speed: 0.75s;
 }
 html {
@@ -113,89 +116,6 @@ body {
         top: 10%;
         left: 58%;
     }
-}
-
-.about {
-    min-height: 100vh;
-    text-align: left;
-    color: black;
-    position: relative;
-    z-index: -1;
-}
-
-.imgabo {
-    width: 50%;
-    height: 100vh;
-    position: absolute;
-    object-fit: cover;
-    right: 0;
-    top: 0;
-    z-index: 0;
-}
-
-.content {
-    padding: 9em 5em;
-    z-index: 1;
-    position: relative;
-    color: #4B4453 ;
-
-    h2 {
-        font-size: 5em;
-        margin-bottom: 0;
-        font-family: 'Abril Fatface', cursive;
-
-    }
-
-    p{
-        font-size: 1.6em;
-
-    }
-}
-
-.gears {
-    min-height: 100vh;
-    text-align: right;
-    background-color: #eeeeee;
-    color: white;
-    position: relative;
-}
-
-
-.content_gears {
-    padding: 9em 5em;
-    z-index: 1;
-    font-family: 'Abril Fatface', cursive;
-
-    h2 {
-        font-size: 5em;
-        margin-bottom: 0;
-        color: #4B4453;
-        font-family: 'Abril Fatface', cursive;
-
-    }
-
-    p{
-        font-size: 1.6em;
-        right: 1%;
-        color: #4B4453;
-    }
-}
-
-.img_gears{
-    width: 30%;
-
-}
-
-.img_gears2{
-    width: 30%;
-    object-fit: cover;
-
-}
-
-.img_gears3{
-    width: 30%;
-    object-fit: cover;
-
 }
 
 
@@ -307,28 +227,6 @@ body {
 
 }
 
-.nav-socials {
-    position: absolute;
-    left: 85%;
-    top: 1%;
-}
-
-.socials li {
-    list-style: none;
-}
-
-.socials  a {
-    text-decoration: none;
-    color: #4B4453;
-    width: 45px;
-    height: 41px;
-    padding-top: 5px;
-    text-align: center;
-    display: inline-block;
-    font-size: 1.3em;
-    border-radius: 5px;
-    transition: all .3s;
-}
 
 
 @media (min-width: 768px) {
