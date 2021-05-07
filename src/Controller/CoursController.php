@@ -81,14 +81,14 @@ class CoursController extends AbstractController
 
             ], 301);
         }
-       $contact =new Contact();
+       $contact = new Contact();
        $contact->setCours($cours);
        $form = $this->createForm(ContactType::class, $contact);
        $form->handleRequest($request);
 
        if ($form->isSubmitted() && $form->isValid()) {
            $notification->notify($contact);
-           $this->addFlash('success', 'Votre email a bine été envoyé');
+           $this->addFlash('success', 'Votre email a bien été envoyé');
            /*
            return $this->redirectToRoute('cours.show', [
                'id' => $cours->getId(),
