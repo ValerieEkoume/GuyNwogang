@@ -56,7 +56,7 @@ class CoursController extends AbstractController
         $courses = $paginator ->paginate(
             $this->repository->findAllVisibleQuery(),
             $request->query->getInt('page', 1),
-            3
+            4
         );
 //            $courses[1]->setFree(false);
 //            $this->em->flush();

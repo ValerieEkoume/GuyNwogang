@@ -5,40 +5,62 @@
 {% block body %}
 
     <div class="jumbotron">
-        <div class="container  mt-5 mr-5">
-            {{ form_start(form) }}
-            <div class="form-row">
-                <div class="col">
-                    {{ form_row(form.genre) }}
-                </div>
-                <div class="col">
-                    {{ form_row(form.niveau) }}
-                </div>
-                <div class="col">
-                    <button class="btn btn-primary">Recherche</button>
-                </div>
-            </div>
-            {{ form_end(form) }}
+
+        <div class="intro">
+            <h1 class="">LES COURS !</h1>
         </div>
+
+        <!-- Seection Recherche -->
+
+{#        <div class="container  mt-5 mr-5">#}
+{#            {{ form_start(form) }}#}
+{#            <div class="form-row">#}
+{#                <div class="col">#}
+{#                    {{ form_row(form.genre) }}#}
+{#                </div>#}
+{#                <div class="col">#}
+{#                    {{ form_row(form.niveau) }}#}
+{#                </div>#}
+{#                <div class="col">#}
+{#                    <button class="btn btn-primary">Recherche</button>#}
+{#                </div>#}
+{#            </div>#}
+{#            {{ form_end(form) }}#}
+{#        </div>#}
     </div>
 
-    <div class="container mt-4">
-           <h1>Voir tous les cours</h1>
-           <div class="row">
+    <div class="text-accueil ">
+        <h2 class="text-center my-4"> TOUS LES COURS</h2>
+    </div>
+
+{#    <div class="container mt-4">#}
+    <div class="container ">
+
+        <div class="row ml-5 d-flex justify-content-center ">
             {% for cours in courses %}
-           <div class="col-md-3">
-               {% include 'cours/_cours.html.twig' %}
+           <div class="col-xs-3 col-sm-3">
+               <article class="cours bg-white rounded shadow ">
+                   <div class=" overflow-hidden">
+                        {% include 'cours/_cours.html.twig' %}
+                   </div>
+               </article>
            </div>
             {% endfor %}
        </div>
-        <div class="pagination">
-            {{ knp_pagination_render(courses) }}
-        </div>
-        <div class="text-center mb-5">
-            <h5 class="btn btn-light"><a href="{{ path('app_joue-alors') }}" class=" text-muted text-decoration-none ">Les nouveautés</a></h5>
-        </div>
-   </div>
 
+        <br>
+
+   </div>
+    <br>
+    <div class="pagination d-flex justify-content-center mt-5">
+        {{ knp_pagination_render(courses) }}
+    </div>
+
+    <br>
+
+    <div class="text-center mb-5">
+        <h5 class="btn btn-light"><a href="{{ path('app_joue-alors') }}" class=" text-muted text-decoration-none ">Les nouveautés</a></h5>
+    </div>
 
 
 

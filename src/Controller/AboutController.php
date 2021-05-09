@@ -16,9 +16,23 @@ class AboutController extends AbstractController
     /**
      * @Route("/about", name="app_about", methods={"GET"})
      */
-    public function about(){
-        return $this->render('GuyNwogang/about.html.twig');
+    public function about(Request $request, ContactNotification $notification){
+        $contact = new Contact();
+        $form = $this->createForm(ContactType::class, $contact);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $notification->notify($contact);
+            $this->addFlash('success', 'votre mail a bien été envoyé, nous vous répondrons dans 
+            les plus brefs délais');
+
+        }
+        return $this->render('GuyNwogang/about.html.twig', [
+            'form' => $form->createView()
+        ]);
+
     }
+
 
 
     /**

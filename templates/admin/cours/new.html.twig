@@ -4,7 +4,9 @@
 
     {% block body %}
         <div class="container mt-4">
-            <h1>Créer une nouvelle leçon</h1>
+            <div class="intro">
+                <h1 class="mt-5 py-3  text-center">CRÉER UNE NOUVELLE LEÇONS</h1>
+            </div>
 
             {{ include('admin/cours/_form.html.twig', {button: 'Ajouter'})}}
 

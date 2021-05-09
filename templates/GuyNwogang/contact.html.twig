@@ -4,6 +4,18 @@
 
 {% block body %}
 
+    <div class="jumbotron text-center ">
+        <div class="intro">
+            {#            <img id="logoJa" src="{{ asset('build/images/logoJA.393c0749.png') }}" alt="">#}
+            <h1 class="">CONTACT !</h1>
+
+        </div>
+    </div>
+
+    <div class="section-title mb-5 py-2 text-center">
+        <h2>CONTACT</h2>
+    </div>
+
     {% for message in app.flashes('success') %}
         <div class="flash-notice">
             {{ message }}
@@ -17,7 +29,8 @@
 
     {% endif %}
 
-    <div id="contactForm" class="mt-4">
+    <div id="contactForm" class="my-4">
+        <div class="container">
         {{ form_start(form) }}
         <div class="row">
             <div class="col">{{ form_row(form.firstname) }}</div>
@@ -28,11 +41,13 @@
             <div class="col">{{ form_row(form.email) }}</div>
         </div>
         {{ form_rest(form) }}
-        <div class="form-group">
+        <div class="form-group my-4">
             <button class="btn btn-primary">Envoyer</button>
         </div>
         {{ form_end(form) }}
+        </div>
     </div>
+
 
 {% endblock %}
 

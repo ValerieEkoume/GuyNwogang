@@ -22,13 +22,23 @@
     <div id="socials" class="nav-socials">
             <ul class="socials d-flex justify-content-end">
 
-                <li class="nav-item">
+                {% if app.user %}
+                    <li class="nav-item pr-2 h3">
+                        Bonjour {{ app.user.username }}
+                    </li>
+                {% endif %}
+
+                <li class="nav-item ">
                     <a class="" href="{{ path('app_contact') }}"><i class="far fa-envelope"></i></a>
                 </li>
 
+                {% if app.user %}
                 <li class="nav-item">
+                    <a class="" href="{{ path('app_logout') }}"><i class="fas fa-user-slash"></i></a>
+                    {% else %}
                     <a class="" href="{{ path('app_login') }}"><i class="far fa-user-circle"></i></a>
                 </li>
+                {% endif %}
 
                 <li>
                     <a href="https://fr-fr.facebook.com/nwogang"><i class="fab fa-facebook"></i></a>
@@ -51,7 +61,4 @@
 
     </div>
 </nav>
-{#</nav>#}
-
-
-{#</div>#}
+<script> </script>

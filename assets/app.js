@@ -13,13 +13,16 @@ import $ from 'jquery';
 
 // start the Stimulus application
 import './bootstrap';
+import { Modal } from 'bootstrap';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 
+
+
 // Permet l'affichage du nom de l'image sélectionnée dans Create et Edit
 $('.custom-file-input').on('change', function (e) {
-    var inputFile = e.currentTarget;
+    let inputFile = e.currentTarget;
     $(inputFile).parents().find('.custom-file-label').html(inputFile.files[0].name);
 });
 
@@ -50,3 +53,22 @@ tl.from(".imgabo", { x: 200, opacity: 0, duration: 1.5})
 tl.from(".content_gears", { y: 300, opacity: 0, duration: 1})
     .from(".img_gears", { x: 200, opacity: 0, duration: 1.5})
 
+
+/* Modale */
+//
+// // var myModal = document.getElementById('exampleModal')
+// // var myInput = document.getElementById('myInput')
+// // myModal.addEventListener('shown.bs.modal', function () {
+// //     myInput.focus()
+// })
+
+videojs('my-video').on('ended', function() {
+
+    var player = videojs('my-video'); //could replace with "this" but just so it is clear to everyone
+    player.pause();
+    var new_url = "newideourl"
+    player.src(new_url);
+    player.load();
+    player.play();
+
+});

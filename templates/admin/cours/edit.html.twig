@@ -4,7 +4,9 @@
 
     {% block body %}
     <div class="container mt-4">
-        <h1>Gérer les leçons</h1>
+        <div class="intro">
+            <h1 class="mt-5  text-center">ÉDITER LES LEÇONS</h1>
+        </div>
 
     {{ include('admin/cours/_form.html.twig', { button: 'Editer'})}}
 

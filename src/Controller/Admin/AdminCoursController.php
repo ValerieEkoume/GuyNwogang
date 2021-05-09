@@ -38,6 +38,7 @@ class AdminCoursController extends AbstractController
      */
     public function accueil()
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
         $courses = $this->repository->findAll();
         return $this->render('admin/cours/accueil.html.twig', compact('courses'));
 

@@ -1,25 +1,23 @@
 
 
-    <div class="card mb-4">
-        <div class="card-body">
-            <h5 class="card-title">
+    <div class="">
+        <article class=" ">
+            <div class="overflow-hidden">
                 <a href="{{ path('cours.show', {slug: cours.slug, id: cours.id}) }}">
                     <img src="{{ (cours.imageName ? vich_uploader_asset(cours) :
                     asset('build/images/GN_thumbnail.ef61ec6f.jpg')) |
                     imagine_filter('squared_thumbnail_medium')}}" alt="{{ cours.title }}"
                          class="w-100 rounded-top"/>
                 </a>
-            </h5>
-            <p class="card-text">
-                {{ cours.description |nl2br }}
-            </p>
-            <h6 class="card-text">
-                {{ cours.genre  |nl2br }} {{ cours.NIVEAU }}
-            </h6>
+            </div>
+            <h3 class="pl-3 pt-3"><a href="{{ path('cours.show', {id: cours.id, slug: cours.slug}) }}"
+                                     class="text-muted text-decoration-none">{{ cours.title }}
+                </a></h3>
+            <p class="pl-3 pb-3 text-muted">{{ cours.genre }} ({{ cours.niveauType }})</p>
 
-        </div>
+        </article>
     </div>
-    
+
 
 
 
