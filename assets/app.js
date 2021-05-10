@@ -9,7 +9,7 @@
 import './styles/app.scss';
 
 import $ from 'jquery';
-
+import 'videojs-playlist';
 
 // start the Stimulus application
 import './bootstrap';
@@ -62,13 +62,3 @@ tl.from(".content_gears", { y: 300, opacity: 0, duration: 1})
 // //     myInput.focus()
 // })
 
-videojs('my-video').on('ended', function() {
-
-    var player = videojs('my-video'); //could replace with "this" but just so it is clear to everyone
-    player.pause();
-    var new_url = "newideourl"
-    player.src(new_url);
-    player.load();
-    player.play();
-
-});

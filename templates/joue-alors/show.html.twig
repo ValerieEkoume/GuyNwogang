@@ -5,17 +5,18 @@
 
 {% block body %}
 
-    {% for message in app.flashes('success') %}
-    <div class="flash-notice">
-        {{ message }}
-    </div>
-    {% endfor %}
 
-    {% if not form.vars.valid %}
-    <div class="alert-danger">
-        Erreur, les champs n'ont pas été correctement remplis !
-    </div>
-    {% endif %}
+{#    {% for message in app.flashes('success') %}#}
+{#    <div class="flash-notice">#}
+{#        {{ message }}#}
+{#    </div>#}
+{#    {% endfor %}#}
+
+{#    {% if not form.vars.valid %}#}
+{#    <div class="alert-danger">#}
+{#        Erreur, les champs n'ont pas été correctement remplis !#}
+{#    </div>#}
+{#    {% endif %}#}
 
     <div class="titre-show">
         <h2 class="text-center">
@@ -51,22 +52,22 @@
 
             </div>
 
-{#            <div class="col">#}
-{#                {% for video in cours.videos %}#}
-{#                <ul class="list-group list-group-numbered">#}
-
-{#                    <li class=""><a class="text-decoration-none text-muted" href="{{ video.videoLink }}">{{ video.videoTitle }}</a></li>#}
-{#                </ul>#}
-{#                {% endfor %}#}
-{#            </div>#}
+            <div class="col">
+                {% for video in cours.videos %}
+                <ul class="list-group list-group-numbered">
+                    <li class=""><a class="text-decoration-none text-muted" href="{{ video.videoLink }}">{{ video.videoTitle }}</a></li>
+                </ul>
+                {% endfor %}
+            </div>
         </div>
+
+
+
     </div>
 
 
-    {% block javascripts %}
-        <script src="path/to/video.js/dist/video.js"></script>
-        <script src="path/to/videojs-playlist/dist/videojs-playlist.js"></script>
-    {% endblock %}
+
+
 
 
 

@@ -29,6 +29,7 @@
         "@videojs/themes": "^1.0.1",
         "fullpage": "^1.5.1",
         "fullpage.js": "^3.1.0",
-        "gsap": "^3.6.1"
+        "gsap": "^3.6.1",
+        "videojs-playlist": "^4.3.1"
     }
 }
