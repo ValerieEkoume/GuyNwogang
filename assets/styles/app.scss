@@ -173,13 +173,35 @@ body {
     margin-left: 30%;
 }
 
+.accueil {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "box4 box5"
+                        "box4 box6";
+}
+
+.box4 {
+    grid-area: box4;
+    //justify-self: center;
+}
+
+.box5 {
+    grid-area: box5;
+
+}
+
+.box6 {
+    grid-area: box6;
+}
+
 .text-accueil h2{
     padding: 20px 30px;
     font-size: 2em;
     font-family: 'Abril Fatface', cursive;
     color: #4B4453;
 }
-
 
 
 .nav-ac h5 {
@@ -224,9 +246,7 @@ body {
 
 }
 
-.d-flex {
 
-}
 
 /* JOUE-ALORS.HTML.TWIG */
 

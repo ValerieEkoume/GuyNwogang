@@ -14,68 +14,135 @@
 
         </div>
     </div>
-        <div class="text-accueil ">
-            <h2 class="text-center my-4"> LES NOUVEAUTES</h2>
-        </div>
+{#        <div class="text-accueil ">#}
+{#            <h2 class="text-center my-4"> LES NOUVEAUTES</h2>#}
+{#        </div>#}
 {#            <h3  class="text-center"></h3>#}
 
-        <div class=" d-flex justify-content-around mt-4">
+<div class="accueil px-5">
+<div class="box4 px-5">
+    <div class="nav-ac" >
+        <button class="btn btn-lg btn" id="tsCours">Tous les Cours</button>
+        <br>
+        <br>
+        <h5 class="border-bottom">Par style</h5>
+        <ul class="">
+            <li><a href="#">Bikutsi</a></li>
+            <li><a href="#">Bensikin</a></li>
+            <li><a href="#">Rock-Bikutsi</a></li>
+            <li><a href="#">Le coin des Mbindis</a></li>
+        </ul>
+        <h5 class="border-bottom">Par niveau</h5>
+        <ul class="">
+            <li><a href="#">Kop - Débutants</a></li>
+            <li><a href="#">KopSs - Amateurs</a></li>
+            <li><a href="#">KopSs - Intermédiaires</a></li>
+            <li><a href="#">KopSss - Confirmés</a></li>
+        </ul>
+        <h5 class="border-bottom">Nos Playlist</h5>
+        <ul class="">
+            <li><a href="#">Bikutsi</a></li>
+            <li><a href="#">Pop</a></li>
+            <li><a href="#">Rock-Bikutsi</a></li>
+            <li><a href="#">Bensikin</a></li>
+        </ul>
 
-            <div class="nav-ac" >
-                    <button class="btn btn-lg btn" id="tsCours">Tous les Cours</button>
-                <br>
-                <br>
-                    <h5 class="border-bottom">Par style</h5>
-                        <ul class="">
-                           <li><a href="#">Bikutsi</a></li>
-                            <li><a href="#">Bensikin</a></li>
-                            <li><a href="#">Rock-Bikutsi</a></li>
-                            <li><a href="#">Le coin des Mbindis</a></li>
-                        </ul>
-                    <h5 class="border-bottom">Par niveau</h5>
-                        <ul class="">
-                            <li><a href="#">Kop - Débutants</a></li>
-                            <li><a href="#">KopSs - Amateurs</a></li>
-                            <li><a href="#">KopSs - Intermédiaires</a></li>
-                            <li><a href="#">KopSss - Confirmés</a></li>
-                        </ul>
-                    <h5 class="border-bottom">Nos Playlist</h5>
-                    <ul class="">
-                        <li><a href="#">Bikutsi</a></li>
-                        <li><a href="#">Pop</a></li>
-                        <li><a href="#">Rock-Bikutsi</a></li>
-                        <li><a href="#">Bensikin</a></li>
-                    </ul>
+    </div>
+</div>
 
-            </div>
+    <div class="box5">
+        <h2 class="text-center my-4">COURS DE BATTERIE ET DE PERCUSSIONS</h2>
+        <h5 class="text-center ">Nous vous souhaitons la bienvenue sur la plateforme <span class="font-weight-bolder">Joue Alors !</span></h5>
+        <p class="text-center">Vous avez toujours rêvé d'apprendre à jouer de la batterie ? Les rythmes africains
+        vous ont toujours attirés et vous souhaitez les explorer ? Vous êtes au bon endroit.
+        </p>
+    </div>
+    <div class="nouveaute m-5">
 
-            <div class="nouveaute">
 
-                <div class="row ml-3 ">
-                    {% for cours in courses  %}
-                        <div class="col-xs-6 col-sm-3">
-                            <article class="cours bg-white rounded shadow">
-                                <div class=" overflow-hidden">
-                                    <a href="{{ path('cours.show', {id: cours.id, slug: cours.slug}) }}">
-                                        <img src="{{ (cours.imageName ? vich_uploader_asset(cours) :
-                                        asset('build/images/GN_thumbnail.ef61ec6f.jpg')) |
-                                        imagine_filter('squared_thumbnail_medium')}}" alt="{{ cours.title }}"
-                                             class="w-100 rounded-top"/>
-                                    </a>
-                                </div>
-                                <h3 class="pl-3 pt-3"><a href="{{ path('cours.show', {id: cours.id, slug: cours.slug}) }}"
-                                        class="text-muted text-decoration-none">{{ cours.title }}
-                                    </a></h3>
-                                <p class="pl-3 pb-3 text-muted">{{ cours.genre }} ({{ cours.niveauType }})</p>
-                            </article>
+        <div class="box6">
+            <h3 class="text-center my-4"> LES NOUVEAUTES</h3>
+        <div class="row ml-3 w-80">
+            {% for cours in courses  %}
+                <div class="col-xs-6 col-sm-3">
+                    <article class="cours bg-white rounded shadow">
+                        <div class=" overflow-hidden">
+                            <a href="{{ path('cours.show', {id: cours.id, slug: cours.slug}) }}">
+                                <img src="{{ (cours.imageName ? vich_uploader_asset(cours) :
+                                asset('build/images/GN_thumbnail.ef61ec6f.jpg')) |
+                                imagine_filter('squared_thumbnail_medium')}}" alt="{{ cours.title }}"
+                                     class="w-100 rounded-top"/>
+                            </a>
                         </div>
-                    {% endfor %}
+                        <h3 class="pl-3 pt-3"><a href="{{ path('cours.show', {id: cours.id, slug: cours.slug}) }}"
+                                                 class="text-muted text-decoration-none">{{ cours.title }}
+                            </a></h3>
+                        <p class="pl-3 pb-3 text-muted">{{ cours.genre }} ({{ cours.niveauType }})</p>
+                    </article>
                 </div>
-
-            </div>
-
-
+            {% endfor %}
         </div>
+
+    </div>
+    </div>
+</div>
+{#        <div class=" d-flex justify-content-around mt-4">#}
+
+{#            <div class="nav-ac" >#}
+{#                    <button class="btn btn-lg btn" id="tsCours">Tous les Cours</button>#}
+{#                <br>#}
+{#                <br>#}
+{#                    <h5 class="border-bottom">Par style</h5>#}
+{#                        <ul class="">#}
+{#                           <li><a href="#">Bikutsi</a></li>#}
+{#                            <li><a href="#">Bensikin</a></li>#}
+{#                            <li><a href="#">Rock-Bikutsi</a></li>#}
+{#                            <li><a href="#">Le coin des Mbindis</a></li>#}
+{#                        </ul>#}
+{#                    <h5 class="border-bottom">Par niveau</h5>#}
+{#                        <ul class="">#}
+{#                            <li><a href="#">Kop - Débutants</a></li>#}
+{#                            <li><a href="#">KopSs - Amateurs</a></li>#}
+{#                            <li><a href="#">KopSs - Intermédiaires</a></li>#}
+{#                            <li><a href="#">KopSss - Confirmés</a></li>#}
+{#                        </ul>#}
+{#                    <h5 class="border-bottom">Nos Playlist</h5>#}
+{#                    <ul class="">#}
+{#                        <li><a href="#">Bikutsi</a></li>#}
+{#                        <li><a href="#">Pop</a></li>#}
+{#                        <li><a href="#">Rock-Bikutsi</a></li>#}
+{#                        <li><a href="#">Bensikin</a></li>#}
+{#                    </ul>#}
+
+{#            </div>#}
+
+{#            <div class="nouveaute">#}
+
+{#                <div class="row ml-3 ">#}
+{#                    {% for cours in courses  %}#}
+{#                        <div class="col-xs-6 col-sm-3">#}
+{#                            <article class="cours bg-white rounded shadow">#}
+{#                                <div class=" overflow-hidden">#}
+{#                                    <a href="{{ path('cours.show', {id: cours.id, slug: cours.slug}) }}">#}
+{#                                        <img src="{{ (cours.imageName ? vich_uploader_asset(cours) :#}
+{#                                        asset('build/images/GN_thumbnail.ef61ec6f.jpg')) |#}
+{#                                        imagine_filter('squared_thumbnail_medium')}}" alt="{{ cours.title }}"#}
+{#                                             class="w-100 rounded-top"/>#}
+{#                                    </a>#}
+{#                                </div>#}
+{#                                <h3 class="pl-3 pt-3"><a href="{{ path('cours.show', {id: cours.id, slug: cours.slug}) }}"#}
+{#                                        class="text-muted text-decoration-none">{{ cours.title }}#}
+{#                                    </a></h3>#}
+{#                                <p class="pl-3 pb-3 text-muted">{{ cours.genre }} ({{ cours.niveauType }})</p>#}
+{#                            </article>#}
+{#                        </div>#}
+{#                    {% endfor %}#}
+{#                </div>#}
+
+{#            </div>#}
+
+
+{#        </div>#}
 
 
         <div class="text-center mt-5">
