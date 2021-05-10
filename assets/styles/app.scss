@@ -184,11 +184,15 @@ body {
 
 .box4 {
     grid-area: box4;
-    //justify-self: center;
+    justify-self: center;
 }
 
 .box5 {
     grid-area: box5;
+
+    margin-left: 5px;
+    margin-right: 10px;
+
 
 }
 
