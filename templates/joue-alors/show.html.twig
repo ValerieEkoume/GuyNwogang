@@ -26,31 +26,11 @@
 
     <div class="container ">
 
-        <div class="row">
-            <div class="col">
-                <video
-                        id="video"
-                        class="video-js"
-                        controls
-                        preload="auto"
-                        width="845"
-                        height="650"
-                        poster="{{ asset('build/images/GN_thumbnail.ef61ec6f.jpg') }}"
-                        data-setup="{}"
-                >
-                    <source src="{{ asset('build/images/1_bikutsiB_bpm100.be32ed6d.mp4') }}" type="video/mp4" />
-                    <source src="MY_VIDEO.webm" type="video/webm" />
-                    {
-                    <p class="vjs-no-js">
-                        To view this video please enable JavaScript, and consider upgrading to a
-                        web browser that
-                        <a href="https://videojs.com/html5-video-support/" target="_blank"
-                        >supports HTML5 video</a
-                        >
-                    </p>
-            </video>
+<div class="">
+                <iframe width="760" height="515" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLnG60NkuHghvEfQS0JjsiheMYvcbw_may" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-            </div>
+</div>
+
 
             <div class="col">
                 {% for video in cours.videos %}
@@ -59,13 +39,9 @@
                 </ul>
                 {% endfor %}
             </div>
-        </div>
-
 
 
     </div>
-
-
 
 
 
