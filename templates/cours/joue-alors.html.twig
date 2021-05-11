@@ -8,6 +8,7 @@
 
         <div class="intro">
             <h1 class="">LES COURS !</h1>
+
         </div>
 
         <!-- Seection Recherche -->
@@ -29,12 +30,44 @@
 {#        </div>#}
     </div>
 
+    <div class="accueil px-5">
+    <div class="box4 px-5">
+        <div class="nav-ac" >
+            <a href="{{ path('app_cours') }}" class="btn btn-lg btn" id="tsCours">Tous les Cours</a>
+            <br>
+            <br>
+{#            <h5 class="border-bottom">Par style</h5>#}
+{#            <ul class="">#}
+{#                <li><a href="#">Bikutsi</a></li>#}
+{#                <li><a href="#">Bensikin</a></li>#}
+{#                <li><a href="#">Rock-Bikutsi</a></li>#}
+{#                <li><a href="#">Le coin des Mbindis</a></li>#}
+{#            </ul>#}
+            <h5 class="border-bottom">Par niveau</h5>
+            <ul class="">
+                <li><a href="#">Kop - Débutants</a></li>
+                <li><a href="#">KopSs - Amateurs</a></li>
+                <li><a href="#">KopSs - Intermédiaires</a></li>
+                <li><a href="#">KopSss - Confirmés</a></li>
+            </ul>
+            <h5 class="border-bottom">Nos Playlist</h5>
+            <ul class="">
+                <li><a href="#">Bikutsi</a></li>
+                <li><a href="#">Pop</a></li>
+                <li><a href="#">Rock-Bikutsi</a></li>
+                <li><a href="#">Bensikin</a></li>
+            </ul>
+
+        </div>
+    </div>
+<div class="box5">
     <div class="text-accueil ">
         <h2 class="text-center my-4"> TOUS LES COURS</h2>
+        <p class="text-center">Trouvez le cours qui vous convient.</p>
     </div>
+</div>
 
-{#    <div class="container mt-4">#}
-    <div class="container ">
+    <div class="box6 ">
 
         <div class="row ml-5 d-flex justify-content-center ">
             {% for cours in courses %}
@@ -62,6 +95,6 @@
         <h5 class="btn btn-light"><a href="{{ path('app_joue-alors') }}" class=" text-muted text-decoration-none ">Les nouveautés</a></h5>
     </div>
 
-
+    </div>
 
 {% endblock %}
