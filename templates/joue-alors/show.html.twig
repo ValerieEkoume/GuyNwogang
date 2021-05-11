@@ -20,28 +20,33 @@
 
     <div class="titre-show">
         <h2 class="text-center">
-            {{ cours.description  | nl2br}}
+            {{ cours.title  | nl2br}}
         </h2>
     </div>
 
-    <div class="container ">
+    <div class="container">
+<div class="show-content ">
+         <div class="video">
+                <iframe width="660" height="415" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLnG60NkuHghvEfQS0JjsiheMYvcbw_may" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="partition">
+            <a href="#" target="_blank" class="btn ">Télécharger la partition</a>
+        </div>
+        <div class="mp3">
+            <a href="#" target="_blank" class="btn mp3">Télécharger le mp3</a>
+        </div>
 
-<div class="">
-                <iframe width="760" height="515" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLnG60NkuHghvEfQS0JjsiheMYvcbw_may" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-</div>
-
-
-            <div class="col">
-                {% for video in cours.videos %}
-                <ul class="list-group list-group-numbered">
-                    <li class=""><a class="text-decoration-none text-muted" href="{{ video.videoLink }}">{{ video.videoTitle }}</a></li>
-                </ul>
-                {% endfor %}
-            </div>
-
-
+    <div class="description-show">
+        <h4 class="text-center">
+            {{ cours.description  | nl2br}}
+        </h4>
+        <p class="pl-3 pb-3 text-muted">{{ cours.genre }} ({{ cours.niveauType }})</p>
     </div>
+</div>
+    </div>
+    
+
+
 
 
 
