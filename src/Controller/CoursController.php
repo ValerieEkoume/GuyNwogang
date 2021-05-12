@@ -73,7 +73,7 @@ class CoursController extends AbstractController
    public function show(Cours $cours, string $slug, Request $request, ContactNotification $notification) : Response
    {
 
-       $this->denyAccessUnlessGranted('ROLE_USER');
+//       $this->denyAccessUnlessGranted('ROLE_USER');
         if ($cours->getSlug() !== $slug) {
             return $this->redirectToRoute('cours.show', [
                 'id' => $cours->getId(),

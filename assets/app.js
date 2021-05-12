@@ -54,11 +54,18 @@ tl.from(".content_gears", { y: 300, opacity: 0, duration: 1})
     .from(".img_gears", { x: 200, opacity: 0, duration: 1.5})
 
 
-/* Modale */
-//
-// // var myModal = document.getElementById('exampleModal')
-// // var myInput = document.getElementById('myInput')
-// // myModal.addEventListener('shown.bs.modal', function () {
-// //     myInput.focus()
-// })
 
+
+/* --------------  Show Tabs ------------*/
+const tabsContainer = document.querySelector(".show-tabs"),
+showSection = document.querySelector(".show-section");
+
+tabsContainer.addEventListener("click", (e) =>{
+    if(e.target.classList.contains("tab-item") && !e.target.classList.contains("active")){
+       tabsContainer.querySelector(".active").classList.remove("active");
+       e.target.classList.add("active");
+       const target = e.target.getAttribute("data-target");
+       showSection.querySelector(".tab-content.active").classList.remove("active");
+       showSection.querySelector(target).classList.add("active");
+    }
+});

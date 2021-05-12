@@ -17,38 +17,109 @@
 {#        Erreur, les champs n'ont pas été correctement remplis !#}
 {#    </div>#}
 {#    {% endif %}#}
+<section class="show-section sec-padding">
+    <div class="container mt-5">
+        <div class="row">
+           <div class="section-title">
+               <h2 class="">
+                   {{ cours.title  | nl2br}}
+               </h2>
+           </div>
+        </div>
+        <div class=" row ">
+            <div class="show-video">
+                <div class="video-box">
+                <iframe width="660" height="415" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLnG60NkuHghvEfQS0JjsiheMYvcbw_may" title="YouTube video player"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="show-text">
 
-    <div class="titre-show">
-        <h2 class="text-center">
-            {{ cours.title  | nl2br}}
-        </h2>
+                    <h5>A propos de ce cours</h5>
+                <div class="caractéristiques">
+                    <div class="caractéristiques-item">{{ cours.genre }}</div>
+                    <div class="caractéristiques-item">{{ cours.niveauType }}</div>
+                    <div class="caractéristiques-item">carat</div>
+                    <div class="caractéristiques-item">caract</div>
+                </div>
+                <div class="show-tabs">
+                    <button type="button" class="tab-item active"  data-target="#informations">Informations</button>
+                    <button type="button" class="tab-item "  data-target="#fichiers">Fichiers</button>
+                </div>
+
+                <!-- Informations Start -->
+                <div class="tab-content active" id="informations">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h6>Description</h6>
+                            <p class="">
+                                {{ cours.description  | nl2br}}
+                            <p>
+                        </div>
+                        <div class="timeline-item">
+                            <h6>Parties</h6>
+                            <p class="">
+                               Ce cours comporte <span>{{ cours.parts}}</span>vidéos
+                            <p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Informations End -->
+
+                <!-- Fichiers Start -->
+                <div class="tab-content" id="fichiers">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h6>Partition</h6>
+                            <a href="#" target="_blank"><i class="far fa-file-pdf"></i></a>
+                            <p>Cette partition vous permet de voir</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h6>Mp3</h6>
+                            <a href="#" target="_blank"><i class="far fa-file-audio"></i></a>
+                            <p>C'est super important de travailler les exercices régulièrement
+                            et surtout en toute indépendance. Avec ce playback, tu as la possibilité
+                            de travailler tout seul, c'est à dire sans moi et sans avoir a te connecter
+                            sur la plateforme.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Fichiers End -->
+            </div>
+            </div>
+        </div>
+
+    <div class="commentaires">
+        <div class="container mt-5">
+            <div class="commentaires-title py-3 px-4">
+                <h3 class="">Commentaires</h3>
+
+            </div>
+            <div class="box-commentaires px-4">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nom d'utilisateur</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Votre message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Envoyer</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="container">
-<div class="show-content ">
-         <div class="video">
-                <iframe width="660" height="415" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLnG60NkuHghvEfQS0JjsiheMYvcbw_may" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="partition">
-            <a href="#" target="_blank" class="btn ">Télécharger la partition</a>
-        </div>
-        <div class="mp3">
-            <a href="#" target="_blank" class="btn mp3">Télécharger le mp3</a>
-        </div>
+</section>
 
-    <div class="description-show">
-        <h4 class="text-center">
-            {{ cours.description  | nl2br}}
-        </h4>
-        <p class="pl-3 pb-3 text-muted">{{ cours.genre }} ({{ cours.niveauType }})</p>
-    </div>
-</div>
-    </div>
+
+
     
-
-
-
-
 
 
 
