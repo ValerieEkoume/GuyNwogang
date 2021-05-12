@@ -1,0 +1,46 @@
+.galerie {
+  min-height: 90vh;
+  text-align: right;
+  color: black;
+  position: relative;
+  margin-top: 3%;
+  background-color: #eeeeee;
+}
+
+.galerie img {
+  width: 100%;
+}
+
+.galerie .gallery2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 20px 10px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.content_galerie {
+  padding: 5em 5em;
+  z-index: 1;
+
+
+  h2 {
+    font-size: 5em;
+    margin-bottom: 0;
+    color: #4B4453;
+    font-family: 'Abril Fatface', cursive;
+
+  }
+
+  p{
+    font-size: 1.6em;
+    right: 1%;
+    color: #4B4453;
+    padding-top: 1em;
+  }
+
+}

@@ -1,9 +1,10 @@
 .gears {
-  min-height: 100vh;
+  min-height: 60vh;
   text-align: right;
   color: white;
   position: relative;
   margin-top: 2%;
+  background-color: #eeeeee;
 }
 
 
@@ -46,5 +47,26 @@ a .img_gears{
   content: "";
   clear: both;
   display: table;
+}
+
+.gears .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.gears.gallery img {
+  width: 100%;
+}
+
+.gears h3 {
+  color: #4B4453;
+  margin-top: 5%;
+}
+
+.gears h3 {
+  color: #4B4453;
+  margin-top: 5%;
 }
 

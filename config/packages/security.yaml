@@ -45,5 +45,6 @@ security:
 #        - { path: '^/joue-alors/{slug}', roles: ROLE_ADMIN }
 #
 #
+#
 #    role_hierarchy:
 #        ROLE_ADMIN:       ROLE_USER
