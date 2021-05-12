@@ -18,13 +18,17 @@
 {#    </div>#}
 {#    {% endif %}#}
 <section class="show-section sec-padding">
-    <div class="container mt-5">
+
+
+
+    <div class="container mt-5 border">
+
         <div class="row">
-           <div class="section-title">
-               <h2 class="">
-                   {{ cours.title  | nl2br}}
-               </h2>
-           </div>
+            <div class="section-title">
+                <h2 class="">
+                    {{ cours.title  | nl2br}}
+                </h2>
+            </div>
         </div>
         <div class=" row ">
             <div class="show-video">
@@ -94,7 +98,14 @@
         </div>
 
     <div class="commentaires">
-        <div class="container mt-5">
+        <div class="container my-5">
+
+            <div class="lines mb-5">
+                <div class="circles"></div>
+            </div>
+{#            <div class="lines">#}
+{#                <div class="circles"></div>#}
+{#            </div>#}
             <div class="commentaires-title py-3 px-4">
                 <h3 class="">Commentaires</h3>
 
@@ -114,6 +125,7 @@
             </div>
         </div>
     </div>
+
 
 </section>
 
