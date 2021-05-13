@@ -19,9 +19,7 @@
 {#    {% endif %}#}
 <main class="show-section sec-padding">
 
-
-
-    <div class="container mt-5 border">
+    <div class="container border">
 
         <div class="row">
             <div class="section-title">
@@ -43,8 +41,8 @@
                 <div class="caractéristiques">
                     <div class="caractéristiques-item">{{ cours.genre }}</div>
                     <div class="caractéristiques-item">{{ cours.niveauType }}</div>
-                    <div class="caractéristiques-item">carat</div>
-                    <div class="caractéristiques-item">caract</div>
+{#                    <div class="caractéristiques-item">carat</div>#}
+{#                    <div class="caractéristiques-item">caract</div>#}
                 </div>
                 <div class="show-tabs">
                     <button type="button" class="tab-item active"  data-target="#informations">Informations</button>
@@ -77,17 +75,17 @@
                     <div class="timeline">
                         <div class="timeline-item">
                             <h6>Partition</h6>
-                            <a href="#" target="_blank"><i class="far fa-file-pdf"></i></a>
-                            <p>Cette partition vous permet de voir</p>
+                            <a href="{{ asset('web/LettredeMotivationVE.pdf') }}" target="_blank"><i class="far fa-file-pdf"></i></a>
+
                         </div>
                         <div class="timeline-item">
                             <h6>Mp3</h6>
-                            <a href="#" target="_blank"><i class="far fa-file-audio"></i></a>
-                            <p>C'est super important de travailler les exercices régulièrement
-                            et surtout en toute indépendance. Avec ce playback, tu as la possibilité
-                            de travailler tout seul, c'est à dire sans moi et sans avoir a te connecter
-                            sur la plateforme.
-                            </p>
+                            <a href="{{ asset('web/1-09 Djaaleě.mp3') }}" target="_blank"><i class="far fa-file-audio"></i></a>
+{#                            <p>C'est super important de travailler les exercices régulièrement#}
+{#                            et surtout en toute indépendance. Avec ce playback, tu as la possibilité#}
+{#                            de travailler tout seul, c'est à dire sans moi et sans avoir a te connecter#}
+{#                            sur la plateforme.#}
+{#                            </p>#}
                         </div>
                     </div>
 
@@ -96,21 +94,16 @@
             </div>
             </div>
         </div>
-
+    <!-- Commentaires Start -->
+    <div class="séparation"></div>
     <div class="commentaires">
-        <div class="container my-5">
+        <div class=" ">
 
-            <div class="lines mb-5">
-                <div class="circles"></div>
-            </div>
-{#            <div class="lines">#}
-{#                <div class="circles"></div>#}
-{#            </div>#}
-            <div class="commentaires-title py-3 px-4">
+            <div class="commentaires-title">
                 <h3 class="">Commentaires</h3>
 
             </div>
-            <div class="box-commentaires px-4">
+            <div class="box-commentaires">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Nom d'utilisateur</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1">
@@ -125,6 +118,7 @@
             </div>
         </div>
     </div>
+    <!-- Commentaires End -->
 
 
 </main>
