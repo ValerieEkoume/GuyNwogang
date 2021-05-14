@@ -29,11 +29,11 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
     --menu-speed: 0.75s;
 }
 html {
-    height: 100%;
+    //height: 100%;
 }
-body::-webkit-scrollbar {
-    display: none;
-}
+//body::-webkit-scrollbar {
+//    display: none;
+//}
 
 body {
     margin: 0;
@@ -41,6 +41,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.4;
     min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -176,7 +177,7 @@ body {
 }
 
 .accueil {
-    height: 90vh;
+    height: 95vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 2fr;
@@ -260,10 +261,17 @@ body {
 
 
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 550px) {
 
-    .main-accueil {
-        display: flex;
+    .accueil {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 2fr 2fr;
+        grid-template-areas:
+                "box5"
+                "box6"
+                "box4"
+    ;
+
     }
 }
 
@@ -430,15 +438,5 @@ body {
 
 
 
-/* ----- VIDEO EN LARGE ABOUT -----*/
-//.a-video {
-//    position: absolute;
-// top: 100%;
-//left: 0;
-//bottom: 0;
-// right: 0;
-// width: 100%;
-// height: 100%;
-// transition: opacity .5s;
-//}
+
 

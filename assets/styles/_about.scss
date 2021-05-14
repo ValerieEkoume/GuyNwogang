@@ -5,11 +5,21 @@
   text-align: right;
   color: black;
   position: relative;
-  margin-top: 3%;
+  //margin-top: 3%;
   background-color: #eeeeee;
+
+  //display: grid;
+  //grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  //grid-template-rows: repeat(1, auto);
+  //grid-column-gap: 20px;
+  //grid-row-gap: 20px;
+  //padding: 20px 10px;
+  //grid-template-areas: "about-img content";
+
 }
 
 .imgabo {
+  //grid-area: about-img;
   width: 50%;
   height: 100vh;
   position: absolute;
@@ -20,8 +30,8 @@
 }
 
 .content {
+  //grid-area: content;
   padding: 3em 5em;
-  z-index: 1;
   position: relative;
   color: #4B4453 ;
   margin-left: 50%;
@@ -29,11 +39,12 @@
 
   h2 {
     font-size: 5em;
-    margin-bottom: 5%;
+    padding: 20px;
     font-family: 'Abril Fatface', cursive;
     text-align: center;
 
   }
+
   h3 {
     font-size: 1.6em;
     font-weight: bolder;
@@ -68,5 +79,232 @@
 
 
 
+@media (max-width: 991px) {
+  .nav-socials {
+    position: absolute;
+    left: 70%;
+    top: 1%;
+    z-index: 1;
+  }
+
+  .about {
+    min-height: 50vh;
+    text-align: right;
+    color: black;
+    position: relative;
+    //margin-top: 3%;
+    background-color: #eeeeee;
+
+  }
+
+  .imgabo {
+    width: 50%;
+    height: 70vh;
+    position: absolute;
+    object-fit: cover;
+    left: 0;
+    top: 6.5%;
+    z-index: 0;
+
+  }
+
+  .content {
+    padding: 1.3em 1.3em;
+    position: relative;
+    color: #4B4453 ;
+    margin-left: 50%;
+    text-align: justify;
+
+    h2 {
+      font-size: 2.5em;
+      padding: 30px;
+      font-family: 'Abril Fatface', cursive;
+      text-align: center;
+
+    }
+
+    h3 {
+      font-size: 1.2em;
+      font-weight: bolder;
+
+    }
+
+    p {
+      font-size: 1em;
+      margin-top: 2%;
+    }
+  }
+
+  .galerie {
+
+    .content_galerie{
+      padding: 1.5em 1.5em;
+      h2 {
+        font-size: 2.5em;
+        text-align: center;
+      }
+    }
+  }
+
+  .gears {
+    margin-top: 25px;
+    text-align: center !important;
+    .content_gears {
+      padding: 1.5em 1.5em;
+
+      h2 {
+        font-size: 2.5em;
+        text-align: center;
+      }
+      h3 {
+        font-size: 1.5em;
+        font-weight: bolder;
+        text-align: center;
+      }
+      .column {
+        float: none;
+        width: 33.33%;
+        padding: 5px;
+      }
+    }
+  }
+  .tour {
+    min-height: auto;
+    position: relative;
+    margin-top: 0;
+    padding-bottom: 30px;
+
+    .content_tour {
+      padding: 1.5em 1.5em;
+
+      h2 {
+        font-size: 2.5em;
+        text-align: center;
+      }
+
+      p{
+        font-size: 1.5em;
+        font-weight: bolder;
+        padding-top: 1em;
+      }
+    }
+  }
+
+  .accueil {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 
+@media (max-width: 768px) {
+  .nav-socials {
+    position: absolute;
+    left: 70%;
+    top: 1%;
+    z-index: 1;
+  }
+
+  .about {
+    width: 100%;
+    min-height: 50vh;
+    //text-align: center;
+    color: black;
+    position: relative;
+
+  }
+
+  .imgabo {
+    display: none;
+    //width: 25%;
+    ////height: 100vh;
+    //position: absolute;
+    //object-fit: none;
+    //left: 0;
+    //top: 0;
+    //z-index: 0;
+
+  }
+
+  .content {
+    padding: 15px 15px;
+    position: relative;
+    color: #4B4453 ;
+    margin: auto;
+    text-align: justify;
+
+    h2 {
+      font-size: 2em;
+      padding: 20px;
+      font-family: 'Abril Fatface', cursive;
+      text-align: center;
+
+    }
+
+    h3 {
+      font-size: 1em;
+      font-weight: bolder;
+
+    }
+
+    p {
+      font-size: 0.8em;
+      margin-top: 2%;
+    }
+  }
+
+  .galerie {
+
+    .content_galerie{
+      padding: 1em 1em;
+      h2 {
+        font-size: 2em;
+        text-align: center;
+      }
+    }
+  }
+
+  .gears {
+    margin-top: 15px;
+    text-align: center !important;
+    .content_gears {
+      padding: 1em 1em;
+
+      h2 {
+        font-size: 2em;
+        text-align: center;
+      }
+      h3 {
+        font-size: 1em;
+        font-weight: bolder;
+        text-align: center;
+      }
+      .column {
+        float: none;
+        width: 33.33%;
+        padding: 5px;
+      }
+    }
+  }
+  .tour {
+    min-height: auto;
+    position: relative;
+    margin-top: 0;
+    padding-bottom: 20px;
+
+    .content_tour {
+      padding: 1em 1em;
+
+      h2 {
+        font-size: 2em;
+        text-align: center;
+      }
+
+      p{
+        font-size: 1em;
+        font-weight: bolder;
+        padding-top: 1em;
+      }
+    }
+  }
+}

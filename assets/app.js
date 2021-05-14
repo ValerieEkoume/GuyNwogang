@@ -30,28 +30,28 @@ const tlm = gsap.timeline({defaults: {ease: "power1.out"}});
 tlm.fromTo("nav", {opacity: 0}, { opacity: 1, duration: 1});
 tlm.fromTo("#sign", {opacity: 0}, { opacity: 1, duration: 1.5});
 
-gsap.registerPlugin(ScrollTrigger);
-
-let tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.about',
-        start: "top center",
-        toggleActions: "restart none none none",
-
-
-    }
-});
-
-
-
-
-tl.from(".imgabo", { x: 200, opacity: 0, duration: 1.5})
-    .from(".content", { y: 300, opacity: 0, duration: 1}, '-=1')
-
-
-
-tl.from(".content_gears", { y: 300, opacity: 0, duration: 1})
-    .from(".img_gears", { x: 200, opacity: 0, duration: 1.5})
+// gsap.registerPlugin(ScrollTrigger);
+//
+// let tl = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: '.about',
+//         start: "top center",
+//         toggleActions: "restart none none none",
+//
+//
+//     }
+// });
+//
+//
+//
+//
+// tl.from(".imgabo", { x: 200, opacity: 0, duration: 1.5})
+//     .from(".content", { y: 300, opacity: 0, duration: 1}, '-=1')
+//
+//
+//
+// tl.from(".content_gears", { y: 300, opacity: 0, duration: 1})
+//     .from(".img_gears", { x: 200, opacity: 0, duration: 1.5})
 
 
 
