@@ -261,18 +261,13 @@ body {
 
 
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 667px) {
 
-    .accueil {
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr 2fr 2fr;
-        grid-template-areas:
-                "box5"
-                "box6"
-                "box4"
-    ;
 
-    }
+
+
+
+
 }
 
 

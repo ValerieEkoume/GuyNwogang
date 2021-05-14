@@ -198,6 +198,32 @@
 
 
 @media (max-width: 768px) {
+
+  .section-title h2{
+    margin-top: 20px;
+    font-size: 2em;
+  }
+.show-section{
+  .show-video,
+  .show-text{
+    width: 100%;
+  }
+
+    .show-text {
+      text-align: center;
+    }
+
+
+
+  .show-section{
+    .section-title h2{
+      margin-top: 20px;
+      font-size: 3em;
+    }
+  }
+}
+
+
   .nav-socials {
     position: absolute;
     left: 70%;
@@ -307,4 +333,14 @@
       }
     }
   }
+}
+
+@media (max-width: 575px) {
+  .show-section{
+    .section-title h2{
+      margin-top: 20px;
+      font-size: 2em;
+    }
+  }
+
 }
