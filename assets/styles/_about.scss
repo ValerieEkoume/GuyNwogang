@@ -199,12 +199,12 @@
 
 @media (max-width: 768px) {
 
-  //.jumbotron  .intro h3 {
-  //  //position: absolute;
-  //  top: 12%;
-  //  left: 48%;
-  //  font-size: 2em;
-  //}
+  .jumbotron  .intro h3 {
+    //position: absolute;
+    top: 12%;
+    left: 48%;
+    font-size: 2em;
+  }
 
   .section-title {
     font-size: 2em;
@@ -365,7 +365,7 @@
   }
 
   .jumbotron  .intro h3 {
-    position: absolute;
+
     top: 8%;
     left: 48%;
     font-size: 1em;
