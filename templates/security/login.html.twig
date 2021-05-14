@@ -5,20 +5,19 @@
 
 {% block body %}
 
-    <div class="jumbotron-2 text-center ">
+    <div class="jumbotron-2  ">
         <div class="intro">
-            {#            <img id="logoJa" src="{{ asset('build/images/logoJA.393c0749.png') }}" alt="">#}
             <h3 class="">CONNECTE-TOI ALORS !</h3>
-
         </div>
     </div>
-
 
     <br>
 
     <form  class="mt-3" method="post">
+<div class="form-title">
+    <h1 class=" my-5 font-weight-normal text-center">Connectez-vous</h1>
 
-        <h1 class=" my-5 font-weight-normal text-center">Connectez-vous</h1>
+</div>
 
         {% for message in app.flashes('success') %}
             <div class="flash-notice text-center h3">

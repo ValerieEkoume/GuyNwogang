@@ -10,8 +10,9 @@
 
             </div>
         </div>
-        <h1 class=" my-3  text-center">Créer un compte</h1>
-
+        <div class="form-title">
+            <h1 class=" my-3  text-center">Créer un compte</h1>
+        </div>
         {% for message in app.flashes('success') %}
             <div class="flash-notice text-center h3">
                 {{ message }}
