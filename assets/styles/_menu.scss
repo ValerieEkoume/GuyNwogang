@@ -1,4 +1,13 @@
 
+#welcome {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 85%;
+  padding: 8px;
+  font-family: 'Abril Fatface', cursive;
+
+}
 
 .menu-wrap {
   position: fixed;
@@ -157,7 +166,7 @@
 
 .nav-socials {
   position: absolute;
-  left: 93%;
+  left: 94%;
   top: 1%;
   z-index: 1;
   //display: flex;

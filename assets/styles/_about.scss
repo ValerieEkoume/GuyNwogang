@@ -80,6 +80,10 @@
 
 
 @media (max-width: 991px) {
+  #welcome {
+    left: 70%;
+  }
+
   .nav-socials {
     position: absolute;
     left: 70%;
@@ -109,7 +113,7 @@
   }
 
   .content {
-    padding: 1.3em 1.3em;
+    padding: 1.3em 1.5em;
     position: relative;
     color: #4B4453 ;
     margin-left: 50%;
@@ -363,7 +367,19 @@
 }
 
 @media (max-width: 575px) {
+  .landing {
+    //
+    //#sign {
+    //  position: absolute;
+    //  top: 20%;
+    // //left: 3%;
+    //}
 
+  }
+  #welcome {
+    left: 35%;
+    font-size: 17px;
+  }
 
   .nav-socials {
     position: absolute;
