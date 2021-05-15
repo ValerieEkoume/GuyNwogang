@@ -18,15 +18,15 @@
 </div>
 
 
-
+    {% if app.user %}
+        <h5 id="welcome" class="nav-item  h5  text-muted">
+            Bonjour {{ app.user.username }}
+        </h5>
+    {% endif %}
     <div id="socials" class="nav-socials">
+
             <ul class="socials ">
 
-                {% if app.user %}
-                    <li class="nav-item pr-2 h3">
-                        Bonjour {{ app.user.username }}
-                    </li>
-                {% endif %}
 
                 <li class="nav-item ">
                     <a class="" href="{{ path('app_contact') }}"><i class="far fa-envelope"></i></a>

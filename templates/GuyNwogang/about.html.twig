@@ -54,6 +54,11 @@
 
         <section class="galerie">
             <div class="content_galerie">
+                {% if app.user %}
+                    <h1 id="welcome" class="nav-item  text-muted">
+                        Bonjour {{ app.user.username }}
+                    </h1>
+                {% endif %}
                 <h2 class="">PHOTOS</h2>
                 <p class="font-weight-light">
                 </p>
