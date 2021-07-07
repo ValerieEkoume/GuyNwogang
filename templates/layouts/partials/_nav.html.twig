@@ -7,10 +7,10 @@
         <div>
             <div>
                 <ul>
-                    <li><a href="{{ path('app_about') }}">Guy Nwogang</a></li>
-                    <li><a href="{{ path('app_joue-alors') }}">Joue Alors !</a></li>
-                    <li><a href="{{ path('app_login') }}">Connexion</a></li>
-                    <li><a href="{{ path('app_contact')}}">Contact</a></li>
+                    <li><a href="{{ path('app_about') }}" >Guy Nwogang</a></li>
+                    <li><a href="{{ path('app_joue-alors') }}" >Joue Alors !</a></li>
+                    <li><a href="{{ path('app_login') }}" >Connexion</a></li>
+                    <li><a href="{{ path('app_contact')}}" >Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -29,30 +29,30 @@
 
 
                 <li class="nav-item ">
-                    <a class="" href="{{ path('app_contact') }}"><i class="far fa-envelope"></i></a>
+                    <a class="" href="{{ path('app_contact') }}" ><i class="far fa-envelope"></i></a>
                 </li>
 
                 {% if app.user %}
                 <li class="nav-item">
                     <a class="" href="{{ path('app_logout') }}"><i class="fas fa-user-slash"></i></a>
                     {% else %}
-                    <a class="" href="{{ path('app_login') }}"><i class="far fa-user-circle"></i></a>
+                    <a class="" href="{{ path('app_login') }}" ><i class="far fa-user-circle"></i></a>
                 </li>
                 {% endif %}
 
                 <li>
-                    <a href="https://fr-fr.facebook.com/nwogang"><i class="fab fa-facebook"></i></a>
+                    <a href="https://fr-fr.facebook.com/nwogang" target="_blank"><i class="fab fa-facebook"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/Nwogang/"><i class="fab fa-instagram"></i></a>
-                </li>
-
-                <li>
-                    <a href="https://www.youtube.com/channel/UCcHQ9niF-7qKGO3tl1Y0ioA"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/Nwogang/" target="_blank"><i class="fab fa-instagram"></i></a>
                 </li>
 
                 <li>
-                <a href="https://twitter.com/Nwogang1"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCcHQ9niF-7qKGO3tl1Y0ioA" target="_blank"><i class="fab fa-youtube"></i></a>
+                </li>
+
+                <li>
+                <a href="https://twitter.com/Nwogang1" target="_blank"><i class="fab fa-twitter"></i></a>
                 </li>
 
 

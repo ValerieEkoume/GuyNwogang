@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20210420074650 extends AbstractMigration
+final class Version20210425182244 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -20,12 +20,12 @@ final class Version20210420074650 extends AbstractMigration
     public function up(Schema $schema) : void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE cours ADD updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP, CHANGE createdAt createdAt DATETIME DEFAULT CURRENT_TIMESTAMP NULL');
+        $this->addSql('CREATE TABLE video (id INT AUTO_INCREMENT NOT NULL, video_title VARCHAR(255) NOT NULL, video_link VARCHAR(255) NOT NULL, created_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL, updated_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
     }
 
     public function down(Schema $schema) : void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE cours DROP updatedAt, CHANGE createdAt createdAt DATETIME  NULL');
+        $this->addSql('DROP TABLE video');
     }
 }

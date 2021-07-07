@@ -10,22 +10,22 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20210420074650 extends AbstractMigration
+final class Version20210420152253 extends AbstractMigration
 {
     public function getDescription() : string
     {
-        return '';
+        return 'Add image_name field to cours table';
     }
 
     public function up(Schema $schema) : void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE cours ADD updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP, CHANGE createdAt createdAt DATETIME DEFAULT CURRENT_TIMESTAMP NULL');
+        $this->addSql('ALTER TABLE cours ADD image_name VARCHAR(255) DEFAULT NULL');
     }
 
     public function down(Schema $schema) : void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE cours DROP updatedAt, CHANGE createdAt createdAt DATETIME  NULL');
+        $this->addSql('ALTER TABLE cours DROP image_name');
     }
 }
